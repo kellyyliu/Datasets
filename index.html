@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Lab01_Yu Liu</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>Project of Yu Liu</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 
 
@@ -14579,27 +14579,20 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Lab-01:-Getting-Started">Lab 01: Getting Started<a class="anchor-link" href="#Lab-01:-Getting-Started">&#182;</a></h1><p>In this lab, we will walk through configuring Google Colab so that you can download the starter code for each lab, run and edit code, and then save and submit it.</p>
-<p>Colab is a cloud-based solution that allows you to run Python and Jupyter notebooks from your browser, without having to configure anything on your personal computer.</p>
-<p>Before continuing with this notebook, please first complete this brief tutorial: <a href="https://colab.research.google.com/notebooks/basic_features_overview.ipynb">Overview of Colab</a></p>
-
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<hr>
-
-<h2 id="Command-line">Command-line<a class="anchor-link" href="#Command-line">&#182;</a></h2><p>Welcome back!</p>
-<p>What Colab does is create a <a href="https://en.wikipedia.org/wiki/Virtual_machine">virtual machine</a>, which is like a fresh install of an operating system made just for you.</p>
-<p>This means that in addition to running Python code in this notebook, you can also interact with the command-line as if you were using a terminal to navigate a computer. If you have never used the command-line before, it is worth reading through <a href="https://computers.tutsplus.com/tutorials/navigating-the-terminal-a-gentle-introduction--mac-3855">this tutorial</a>.</p>
-<p>Notebooks also allow you to run shell commands by preceding the command with a <code>!</code>.</p>
-<p>For example, the command below will list the current working directory where this notebook is running.</p>
+<h1 id="Population-Ageing-in-the-World">Population Ageing in the World<a class="anchor-link" href="#Population-Ageing-in-the-World">&#182;</a></h1><p>Yu Liu</p>
+<p><a href="kellyyliu.github.io">Link to the Github Webpage</a></p>
+<p>Project Goal</p>
+<p>This project uses data from <a href="https://databank.worldbank.org/source/population-estimates-and-projections#advancedDownloadOptions">https://databank.worldbank.org/source/population-estimates-and-projections#advancedDownloadOptions</a> to illustrate the population ageing situation in the world.</p>
+<p>Population ageing is becoming an increasingly more serious issue for many countries. When a country has the ratio of population aged 65 and above is equal to or larger than 7%, that country can be regarded as entering into population ageing stage. The accompanying phenomena are increasing life expectancy and declining fertility rates. I use 2000 and 2020 population data for all countries to demonstrate those changes.</p>
+<p>There are three questions I'd like to answer:</p>
+<ol>
+<li><p>Is population ageing a global issue?</p>
+</li>
+<li><p>What can we say about life expectancy?</p>
+</li>
+<li><p>What can we say about fertility rates?</p>
+</li>
+</ol>
 
 </div>
 </div>
@@ -14609,10 +14602,18 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[116]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>pwd
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Import data</span>
+
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> 
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">wb_population</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/Users/yuliu/Desktop/Intro to Computer Science/WB_Population_Data/WB_Population.csv&#39;</span><span class="p">)</span>
+
+<span class="n">wb_population</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -14630,1105 +14631,12 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>/content
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>This tells us that we are running Ubuntu, a Linux distribution, and also says what version we're running.</p>
-<p>To list the contents of a folder, you can use the <code>ls</code> command. This will list the contents of the current working directory:</p>
-
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>ls
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>cmps3160  sample_data  test_file.txt
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>We can see the contents of the <code>sample_data</code> directory like this:</p>
-
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>ls sample_data
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>anscombe.json		      mnist_test.csv
-california_housing_test.csv   mnist_train_small.csv
-california_housing_train.csv  README.md
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>If expand the left sidebar in Colab, you should see a folder icon. This will show the typical file navigation menu, and you should see the <code>sample_data</code> folder there as well.</p>
-
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>And the following command will list information about the operating system that this notebook is running on. Note that the <code>cat</code> command prints the contents of a file. So, this is printing the contents of all files in the <code>/etc/</code> folder that end in the word <code>release,</code> which is where Linux distributions store OS information.</p>
-
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>cat /etc/*release
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>DISTRIB_ID=Ubuntu
-DISTRIB_RELEASE=22.04
-DISTRIB_CODENAME=jammy
-DISTRIB_DESCRIPTION=&#34;Ubuntu 22.04.2 LTS&#34;
-PRETTY_NAME=&#34;Ubuntu 22.04.2 LTS&#34;
-NAME=&#34;Ubuntu&#34;
-VERSION_ID=&#34;22.04&#34;
-VERSION=&#34;22.04.2 LTS (Jammy Jellyfish)&#34;
-VERSION_CODENAME=jammy
-ID=ubuntu
-ID_LIKE=debian
-HOME_URL=&#34;https://www.ubuntu.com/&#34;
-SUPPORT_URL=&#34;https://help.ubuntu.com/&#34;
-BUG_REPORT_URL=&#34;https://bugs.launchpad.net/ubuntu/&#34;
-PRIVACY_POLICY_URL=&#34;https://www.ubuntu.com/legal/terms-and-policies/privacy-policy&#34;
-UBUNTU_CODENAME=jammy
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Cloning-the-course-repository">Cloning the course repository<a class="anchor-link" href="#Cloning-the-course-repository">&#182;</a></h2><p>For many labs and demos, you will need to access data that is stored in the class GitHub repository, which is here:</p>
-<p><a href="https://github.com/nmattei/cmps3160/">https://github.com/nmattei/cmps3160/</a></p>
-<p>If you have never used GitHub before, git is one of the most widely used version control management systems today, and invaluable when working in a team. GitHub is a web-based hosting service built around git that supports hosting git repositories, user management, etc. There are other similar services, e.g., BitBucket and GitLab.</p>
-<p>Our use of git/github for the class will be minimal; however, we encourage you to use it for collaboration for your class project, or for other classes, or for anything because it's great. To learn more about GitHub, see <a href="https://docs.github.com/en/get-started/quickstart/hello-world">this tutorial</a>. Note -- you don't need to do that tutorial to complete this notebook.</p>
-<p>The main thing we want to do is clone the course files into this Colab virtual machine. To do so, we will issue a <code>git clone</code> command. This will copy all the files from the course Github to our virtual machine:</p>
-
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>git clone https://github.com/nmattei/cmps3160.git
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Cloning into &#39;cmps3160&#39;...
-remote: Enumerating objects: 1708, done.
-remote: Counting objects: 100% (598/598), done.
-remote: Compressing objects: 100% (268/268), done.
-remote: Total 1708 (delta 351), reused 486 (delta 278), pack-reused 1110
-Receiving objects: 100% (1708/1708), 47.99 MiB | 27.67 MiB/s, done.
-Resolving deltas: 100% (952/952), done.
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>We should now see a folder called <code>cmps3160</code>, which contains a copy of the GitHub repository:</p>
-
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>ls
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>cmps3160  sample_data
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>ls cmps3160
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>404.html      _data	  Gemfile.lock	js	  _projects	syllabus.md
-CHANGELOG.md  _demos	  img		_labs	  README.md	tags.html
-_config.yml   Dockerfile  _includes	_layouts  resources.md
-css	      Gemfile	  index.md	LICENSE   schedule.md
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Changing-Directories">Changing Directories<a class="anchor-link" href="#Changing-Directories">&#182;</a></h2>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>To change the current working directory, we will use the <code>cd</code> command. Note that we need to prefix this with a % symbol, to ensure the directory change will persist to the next cells.</p>
-
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">cd</span> cmps3160/_labs
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>/content/cmps3160/_labs
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>pwd
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>/content/cmps3160/_demos/data
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Now, we can list the contents of the `_labs` folder.</span>
-<span class="o">!</span>ls
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>data	Lab01  Lab03  Lab05  Lab07  Lab09  Lab11  old	     _tmp.md
-images	Lab02  Lab04  Lab06  Lab08  Lab10  Lab12  README.md
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># change back the working directory to /content</span>
-<span class="o">%</span><span class="k">cd</span> /content
-<span class="o">!</span>ls
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>/content
-cmps3160  sample_data
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Non-persistence-of-Colab-Virtual-Machines">Non-persistence of Colab Virtual Machines<a class="anchor-link" href="#Non-persistence-of-Colab-Virtual-Machines">&#182;</a></h2><p>An important thing to note about Colab is that files you create during the session will not persist once the runtime shuts down. Google creates these temporary virtual environments to host your notebook, but it shuts them down so the resource can be reallocated to other notebooks. The runtime will shutdown automatically if not used for a few hours, so be careful about files that are created during the session.</p>
-<p>This means that the <code>cmps3160</code> folder that we just created will disappear if we restart the session. You can test this by clicking on <code>Runtime-&gt;Disconnect and delete Runtime</code>. If you do so, you'll notice <code>cmps3160</code> is gone:</p>
-
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>ls
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>sample_data
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>To get it back, you'll have to issue the <code>git clone</code> command above again.</p>
-<p>While these newly created files will disappear, note that the code you write in this notebook should be fine. It should be saved in the <code>Colab Notebooks</code> folder in the root of your Google Drive. Please be sure to save frequently as you are working on assignments.</p>
-
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Mounting-Your-Google-Drive">Mounting Your Google Drive<a class="anchor-link" href="#Mounting-Your-Google-Drive">&#182;</a></h2><p>On some occasions, you may want to create data that will persist. For example, when working on your course project, you don't want to re-collect any data you need for your analysis.</p>
-<p>One way to make this data persist is to write directly to your Google Drive, rather than to this virual machine. To do so, we can use a Python command to "mount" the Google Drive. This will pop up a screen asking you to give this Colab notebook access to your Google Drive. <strong>If you have multiple Google accounts, please be sure to use the same one consistently throughout the course.</strong>:</p>
-
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Mount our personal google drive. This will pop up a</span>
-<span class="c1"># confirmation screen giving this notebook access to your Google drive.</span>
-<span class="c1"># You will first need a gmail account for this to work.</span>
-<span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
-<span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Mounted at /content/drive
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>You should now see the contents of your Google drive by navigating to the folder icon in the left panel. It is viewable at <code>/content/drive/MyDrive</code>.</p>
-<p>You can also use the <code>ls</code> command to list the contents of your Google Drive:</p>
-
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>ls /content/drive/MyDrive
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>To change the current working directory to be the location of your Google drive, we will issue a <code>cd</code> command preceded by the % symbol. The difference between ! and % is that % will actually have a persistent effect on the notebook.</p>
-
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">cd</span> /content/drive/My Drive
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>/content/drive/My Drive
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>pwd
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>/content/drive/My Drive
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>To test that this works, we will create a text file and write a sentence to it.</p>
-
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">outf</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;test_file.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;wt&#39;</span><span class="p">)</span>
-<span class="n">outf</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;Hello from Colab!&#39;</span><span class="p">)</span>
-<span class="n">outf</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>We can see that this file exists by printing its contents here:</p>
-
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>cat test_file.txt
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Hello from Colab!</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>You should also see this file when you navigate to your Google Drive separately in your browser.</p>
-<p>This file will remain here even if you shutdown the runtime of this notebook.</p>
-
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Data-for-Labs">Data for Labs<a class="anchor-link" href="#Data-for-Labs">&#182;</a></h2><p>The data used in the labs is in the <code>_labs/data</code> folder of the course repository.</p>
-<p>Since we already cloned the repository, let's naviage to the <code>_labs</code> folder:</p>
-
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">cd</span> /content/cmps3160/_labs/
-<span class="o">!</span>ls
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>/content/cmps3160/_labs
-data	Lab01  Lab03  Lab05  Lab07  Lab09  Lab11  old	     _tmp.md
-images	Lab02  Lab04  Lab06  Lab08  Lab10  Lab12  README.md
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>The <code>data</code> folder contains all the data used for the labs.</p>
-
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>ls data
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>ames.tsv  movielens.zip  names.zip  reds.csv  tips.csv	titanic.csv  whites.csv
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>The next lab will work with the file <code>titanic.csv</code>, which contains information on passengers of the ill-fated Titanic passenger ship. You can use the command <code>head</code> to see the first ten lines of this file.</p>
-
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>head data/titanic.csv
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>﻿pclass,survived,name,sex,age,sibsp,parch,ticket,fare,cabin,embarked,boat,body,home.dest
-1,1,&#34;Allen, Miss. Elisabeth Walton&#34;,female,29,0,0,24160,211.3375,B5,S,2,,&#34;St Louis, MO&#34;
-1,1,&#34;Allison, Master. Hudson Trevor&#34;,male,0.9167,1,2,113781,151.5500,C22 C26,S,11,,&#34;Montreal, PQ / Chesterville, ON&#34;
-1,0,&#34;Allison, Miss. Helen Loraine&#34;,female,2,1,2,113781,151.5500,C22 C26,S,,,&#34;Montreal, PQ / Chesterville, ON&#34;
-1,0,&#34;Allison, Mr. Hudson Joshua Creighton&#34;,male,30,1,2,113781,151.5500,C22 C26,S,,135,&#34;Montreal, PQ / Chesterville, ON&#34;
-1,0,&#34;Allison, Mrs. Hudson J C (Bessie Waldo Daniels)&#34;,female,25,1,2,113781,151.5500,C22 C26,S,,,&#34;Montreal, PQ / Chesterville, ON&#34;
-1,1,&#34;Anderson, Mr. Harry&#34;,male,48,0,0,19952,26.5500,E12,S,3,,&#34;New York, NY&#34;
-1,1,&#34;Andrews, Miss. Kornelia Theodosia&#34;,female,63,1,0,13502,77.9583,D7,S,10,,&#34;Hudson, NY&#34;
-1,0,&#34;Andrews, Mr. Thomas Jr&#34;,male,39,0,0,112050,0.0000,A36,S,,,&#34;Belfast, NI&#34;
-1,1,&#34;Appleton, Mrs. Edward Dale (Charlotte Lamson)&#34;,female,53,2,0,11769,51.4792,C101,S,D,,&#34;Bayside, Queens, NY&#34;
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>We can see that this is a comma-separated file, where each row contains information on a ship passenger.</p>
-
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Pandas">Pandas<a class="anchor-link" href="#Pandas">&#182;</a></h2><p>Pandas is a Python library that we will be using extensively to store and analyze data. You can find a brief overview of Pandas <a href="https://pandas.pydata.org/docs/user_guide/10min.html">here</a>.</p>
-<p>The key data structure in Pandas is the <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html">DataFrame</a>, which is conceptually similar to an Excel spreadsheet.</p>
-<p>Below, we import the <code>pandas</code> library and read <code>titanic.csv</code> into a new DataFrame object called <code>df</code>.</p>
-<p>Note that the path we enter here will depend on the current working directory. Here, we assume we are already in the <code>/content/cmps3160/_labs</code> folder, so we use the <strong>relative path</strong> <code>data/titanic.csv</code> in order to read in the file. This path is relative to the current working directory.</p>
-<p>We can print the first five rows of the DataFrame using the <code>.head()</code> command.</p>
-
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/titanic.csv&#39;</span><span class="p">)</span>
-<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&nbsp;]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[116]:</div>
 
 
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-
-
-  <div id="df-4c7afb3c-c8a4-435f-89fa-3d81b432e571">
-    <div class="colab-df-container">
-      <div>
+<div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -15746,254 +14654,154 @@ images	Lab02  Lab04  Lab06  Lab08  Lab10  Lab12  README.md
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>pclass</th>
-      <th>survived</th>
-      <th>name</th>
-      <th>sex</th>
-      <th>age</th>
-      <th>sibsp</th>
-      <th>parch</th>
-      <th>ticket</th>
-      <th>fare</th>
-      <th>cabin</th>
-      <th>embarked</th>
-      <th>boat</th>
-      <th>body</th>
-      <th>home.dest</th>
+      <th>Country Name</th>
+      <th>Country Code</th>
+      <th>Series Name</th>
+      <th>Series Code</th>
+      <th>1960 [YR1960]</th>
+      <th>1961 [YR1961]</th>
+      <th>1962 [YR1962]</th>
+      <th>1963 [YR1963]</th>
+      <th>1964 [YR1964]</th>
+      <th>1965 [YR1965]</th>
+      <th>...</th>
+      <th>2014 [YR2014]</th>
+      <th>2015 [YR2015]</th>
+      <th>2016 [YR2016]</th>
+      <th>2017 [YR2017]</th>
+      <th>2018 [YR2018]</th>
+      <th>2019 [YR2019]</th>
+      <th>2020 [YR2020]</th>
+      <th>2021 [YR2021]</th>
+      <th>2022 [YR2022]</th>
+      <th>2023 [YR2023]</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>1</td>
-      <td>1</td>
-      <td>Allen, Miss. Elisabeth Walton</td>
-      <td>female</td>
-      <td>29.0000</td>
-      <td>0</td>
-      <td>0</td>
-      <td>24160</td>
-      <td>211.3375</td>
-      <td>B5</td>
-      <td>S</td>
-      <td>2</td>
-      <td>NaN</td>
-      <td>St Louis, MO</td>
+      <td>Afghanistan</td>
+      <td>AFG</td>
+      <td>Age dependency ratio (% of working-age populat...</td>
+      <td>SP.POP.DPND</td>
+      <td>80.0511140452116</td>
+      <td>80.2223403638055</td>
+      <td>80.4019428356728</td>
+      <td>80.7153176723975</td>
+      <td>81.2195570776344</td>
+      <td>81.9948151777348</td>
+      <td>...</td>
+      <td>94.7066970972784</td>
+      <td>93.0424476640396</td>
+      <td>92.0121249200047</td>
+      <td>90.5430941060045</td>
+      <td>89.0914511265535</td>
+      <td>87.649321552026</td>
+      <td>85.9595495980435</td>
+      <td>84.5992570171333</td>
+      <td>83.5703595136227</td>
+      <td>82.6159048623208</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>1</td>
-      <td>1</td>
-      <td>Allison, Master. Hudson Trevor</td>
-      <td>male</td>
-      <td>0.9167</td>
-      <td>1</td>
-      <td>2</td>
-      <td>113781</td>
-      <td>151.5500</td>
-      <td>C22 C26</td>
-      <td>S</td>
-      <td>11</td>
-      <td>NaN</td>
-      <td>Montreal, PQ / Chesterville, ON</td>
+      <td>Afghanistan</td>
+      <td>AFG</td>
+      <td>Age dependency ratio, old</td>
+      <td>SP.POP.DPND.OL</td>
+      <td>5.10090106306272</td>
+      <td>5.0780879187975</td>
+      <td>5.04955848118009</td>
+      <td>5.02202041582739</td>
+      <td>4.99971912996147</td>
+      <td>4.98528747223266</td>
+      <td>...</td>
+      <td>4.69079678722919</td>
+      <td>4.6442456380075</td>
+      <td>4.60635088670088</td>
+      <td>4.57268660954771</td>
+      <td>4.55160703424134</td>
+      <td>4.53690097986338</td>
+      <td>4.4945527274917</td>
+      <td>4.43787182461417</td>
+      <td>4.39530015497943</td>
+      <td>4.37390804047101</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>1</td>
-      <td>0</td>
-      <td>Allison, Miss. Helen Loraine</td>
-      <td>female</td>
-      <td>2.0000</td>
-      <td>1</td>
-      <td>2</td>
-      <td>113781</td>
-      <td>151.5500</td>
-      <td>C22 C26</td>
-      <td>S</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>Montreal, PQ / Chesterville, ON</td>
+      <td>Afghanistan</td>
+      <td>AFG</td>
+      <td>Age dependency ratio, young</td>
+      <td>SP.POP.DPND.YG</td>
+      <td>74.9502129821489</td>
+      <td>75.144252445008</td>
+      <td>75.3523843544927</td>
+      <td>75.6932972565702</td>
+      <td>76.2198379476729</td>
+      <td>77.0095277055021</td>
+      <td>...</td>
+      <td>90.0159003100492</td>
+      <td>88.3982020260321</td>
+      <td>87.4057740333038</td>
+      <td>85.9704074964568</td>
+      <td>84.5398440923121</td>
+      <td>83.1124205721626</td>
+      <td>81.4649968705518</td>
+      <td>80.1613851925191</td>
+      <td>79.1750593586432</td>
+      <td>78.2419968218498</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>1</td>
-      <td>0</td>
-      <td>Allison, Mr. Hudson Joshua Creighton</td>
-      <td>male</td>
-      <td>30.0000</td>
-      <td>1</td>
-      <td>2</td>
-      <td>113781</td>
-      <td>151.5500</td>
-      <td>C22 C26</td>
-      <td>S</td>
-      <td>NaN</td>
-      <td>135.0</td>
-      <td>Montreal, PQ / Chesterville, ON</td>
+      <td>Afghanistan</td>
+      <td>AFG</td>
+      <td>Birth rate, crude (per 1,000 people)</td>
+      <td>SP.DYN.CBRT.IN</td>
+      <td>50.34</td>
+      <td>50.443</td>
+      <td>50.57</td>
+      <td>50.703</td>
+      <td>50.831</td>
+      <td>50.872</td>
+      <td>...</td>
+      <td>39.105</td>
+      <td>38.803</td>
+      <td>37.936</td>
+      <td>37.342</td>
+      <td>36.927</td>
+      <td>36.466</td>
+      <td>36.051</td>
+      <td>35.842</td>
+      <td>..</td>
+      <td>..</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>1</td>
-      <td>0</td>
-      <td>Allison, Mrs. Hudson J C (Bessie Waldo Daniels)</td>
-      <td>female</td>
-      <td>25.0000</td>
-      <td>1</td>
-      <td>2</td>
-      <td>113781</td>
-      <td>151.5500</td>
-      <td>C22 C26</td>
-      <td>S</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>Montreal, PQ / Chesterville, ON</td>
+      <td>Afghanistan</td>
+      <td>AFG</td>
+      <td>Death rate, crude (per 1,000 people)</td>
+      <td>SP.DYN.CDRT.IN</td>
+      <td>31.921</td>
+      <td>31.349</td>
+      <td>30.845</td>
+      <td>30.359</td>
+      <td>29.867</td>
+      <td>29.389</td>
+      <td>...</td>
+      <td>7.395</td>
+      <td>7.331</td>
+      <td>7.077</td>
+      <td>7.027</td>
+      <td>6.981</td>
+      <td>6.791</td>
+      <td>7.113</td>
+      <td>7.344</td>
+      <td>..</td>
+      <td>..</td>
     </tr>
   </tbody>
 </table>
+<p>5 rows × 68 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-4c7afb3c-c8a4-435f-89fa-3d81b432e571')"
-              title="Convert this dataframe to an interactive table."
-              style="display:none;">
-
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-       width="24px">
-    <path d="M0 0h24v24H0V0z" fill="none"/>
-    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
-  </svg>
-      </button>
-
-
-
-    <div id="df-360678e5-1b5e-4f73-8000-328d44d48a2f">
-      <button class="colab-df-quickchart" onclick="quickchart('df-360678e5-1b5e-4f73-8000-328d44d48a2f')"
-              title="Suggest charts."
-              style="display:none;">
-
-<svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-     width="24px">
-    <g>
-        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
-    </g>
-</svg>
-      </button>
-    </div>
-
-<style>
-  .colab-df-quickchart {
-    background-color: #E8F0FE;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    display: none;
-    fill: #1967D2;
-    height: 32px;
-    padding: 0 0 0 0;
-    width: 32px;
-  }
-
-  .colab-df-quickchart:hover {
-    background-color: #E2EBFA;
-    box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-    fill: #174EA6;
-  }
-
-  [theme=dark] .colab-df-quickchart {
-    background-color: #3B4455;
-    fill: #D2E3FC;
-  }
-
-  [theme=dark] .colab-df-quickchart:hover {
-    background-color: #434B5C;
-    box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-    filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-    fill: #FFFFFF;
-  }
-</style>
-
-    <script>
-      async function quickchart(key) {
-        const containerElement = document.querySelector('#' + key);
-        const charts = await google.colab.kernel.invokeFunction(
-            'suggestCharts', [key], {});
-      }
-    </script>
-
-      <script>
-
-function displayQuickchartButton(domScope) {
-  let quickchartButtonEl =
-    domScope.querySelector('#df-360678e5-1b5e-4f73-8000-328d44d48a2f button.colab-df-quickchart');
-  quickchartButtonEl.style.display =
-    google.colab.kernel.accessAllowed ? 'block' : 'none';
-}
-
-        displayQuickchartButton(document);
-      </script>
-      <style>
-    .colab-df-container {
-      display:flex;
-      flex-wrap:wrap;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-      <script>
-        const buttonEl =
-          document.querySelector('#df-4c7afb3c-c8a4-435f-89fa-3d81b432e571 button.colab-df-convert');
-        buttonEl.style.display =
-          google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-        async function convertToInteractive(key) {
-          const element = document.querySelector('#df-4c7afb3c-c8a4-435f-89fa-3d81b432e571');
-          const dataTable =
-            await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                     [key], {});
-          if (!dataTable) return;
-
-          const docLinkHtml = 'Like what you see? Visit the ' +
-            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-            + ' to learn more about interactive tables.';
-          element.innerHTML = '';
-          dataTable['output_type'] = 'display_data';
-          await google.colab.output.renderOutput(dataTable, element);
-          const docLink = document.createElement('div');
-          docLink.innerHTML = docLinkHtml;
-          element.appendChild(docLink);
-        }
-      </script>
-    </div>
-  </div>
-
 </div>
 
 </div>
@@ -16007,11 +14815,22 @@ function displayQuickchartButton(domScope) {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[117]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># How many rows are there?</span>
-<span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Extract 2020 data</span>
+
+<span class="n">wb_population</span><span class="p">[</span><span class="s1">&#39;2020 [YR2020]&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+
+<span class="n">wb_population_2020</span> <span class="o">=</span> <span class="n">wb_population</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,[</span><span class="s1">&#39;Country Name&#39;</span><span class="p">,</span><span class="s1">&#39;Series Name&#39;</span><span class="p">,</span><span class="s1">&#39;2020 [YR2020]&#39;</span><span class="p">]]</span>
+
+<span class="n">wb_population_2020</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+
+<span class="n">wb_population_2020_cube</span> <span class="o">=</span> <span class="n">wb_population_2020</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span>
+                            <span class="n">index</span> <span class="o">=</span> <span class="s2">&quot;Country Name&quot;</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Series Name&quot;</span><span class="p">],</span>
+                            <span class="n">values</span> <span class="o">=</span> <span class="s2">&quot;2020 [YR2020]&quot;</span><span class="p">,</span> <span class="n">aggfunc</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">)</span>
+<span class="n">wb_population_2020_cube</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2020</span>
+<span class="n">wb_population_2020_cube</span>
 </pre></div>
 
      </div>
@@ -16029,13 +14848,1110 @@ function displayQuickchartButton(domScope) {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&nbsp;]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[117]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Series Name</th>
+      <th>Age dependency ratio (% of working-age population)</th>
+      <th>Age dependency ratio, old</th>
+      <th>Age dependency ratio, young</th>
+      <th>Birth rate, crude (per 1,000 people)</th>
+      <th>Death rate, crude (per 1,000 people)</th>
+      <th>Fertility rate, total (births per woman)</th>
+      <th>Life expectancy at birth, female (years)</th>
+      <th>Life expectancy at birth, male (years)</th>
+      <th>Life expectancy at birth, total (years)</th>
+      <th>Mortality rate, adult, female (per 1,000 female adults)</th>
+      <th>...</th>
+      <th>Probability of dying among youth ages 20-24 years (per 1,000)</th>
+      <th>Probability of dying at age 5-14 years (per 1,000 children age 5)</th>
+      <th>Rural population</th>
+      <th>Rural population (% of total population)</th>
+      <th>Rural population growth (annual %)</th>
+      <th>Sex ratio at birth (male births per female births)</th>
+      <th>Urban population</th>
+      <th>Urban population (% of total population)</th>
+      <th>Urban population growth (annual %)</th>
+      <th>year</th>
+    </tr>
+    <tr>
+      <th>Country Name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Afghanistan</th>
+      <td>85.9595495980435</td>
+      <td>4.4945527274917</td>
+      <td>81.4649968705518</td>
+      <td>36.051</td>
+      <td>7.113</td>
+      <td>4.75</td>
+      <td>65.432</td>
+      <td>59.866</td>
+      <td>62.575</td>
+      <td>210.053</td>
+      <td>...</td>
+      <td>17.9</td>
+      <td>..</td>
+      <td>28829317</td>
+      <td>73.974</td>
+      <td>2.76772385533188</td>
+      <td>1.052</td>
+      <td>10142913</td>
+      <td>26.026</td>
+      <td>4.18535706165902</td>
+      <td>2020</td>
+    </tr>
+    <tr>
+      <th>Africa Eastern and Southern</th>
+      <td>81.9689633250994</td>
+      <td>5.73311054063037</td>
+      <td>75.3108615538635</td>
+      <td>33.9167457004664</td>
+      <td>7.62054776213486</td>
+      <td>4.41690032191029</td>
+      <td>65.8364652190824</td>
+      <td>60.8174841935841</td>
+      <td>63.313860330682</td>
+      <td>224.232000876936</td>
+      <td>...</td>
+      <td>13.4642698478062</td>
+      <td>..</td>
+      <td>432797498</td>
+      <td>63.17169763064</td>
+      <td>1.884605854699</td>
+      <td>1.03229841001386</td>
+      <td>252315481</td>
+      <td>36.82830236936</td>
+      <td>4.06858924235209</td>
+      <td>2020</td>
+    </tr>
+    <tr>
+      <th>Africa Western and Central</th>
+      <td>86.3069202655725</td>
+      <td>5.38630996805807</td>
+      <td>80.5436398162813</td>
+      <td>36.6157297910259</td>
+      <td>10.6012972524141</td>
+      <td>5.0493293781153</td>
+      <td>58.3462397855696</td>
+      <td>56.1310226277444</td>
+      <td>57.2263727312399</td>
+      <td>297.189740156099</td>
+      <td>...</td>
+      <td>12.151355866767</td>
+      <td>..</td>
+      <td>243081107</td>
+      <td>52.142168975222</td>
+      <td>1.4436291654464</td>
+      <td>1.03687713765131</td>
+      <td>223107995</td>
+      <td>47.857831024778</td>
+      <td>3.92380423213898</td>
+      <td>2020</td>
+    </tr>
+    <tr>
+      <th>Albania</th>
+      <td>47.6966322543307</td>
+      <td>23.368744938597</td>
+      <td>24.3278873157337</td>
+      <td>10.285</td>
+      <td>10.785</td>
+      <td>1.4</td>
+      <td>79.676</td>
+      <td>74.632</td>
+      <td>76.989</td>
+      <td>56.31</td>
+      <td>...</td>
+      <td>2</td>
+      <td>..</td>
+      <td>1075204</td>
+      <td>37.888</td>
+      <td>-2.87800331245244</td>
+      <td>1.078</td>
+      <td>1762645</td>
+      <td>62.112</td>
+      <td>0.85761092300088</td>
+      <td>2020</td>
+    </tr>
+    <tr>
+      <th>Algeria</th>
+      <td>57.889466858055</td>
+      <td>9.50095142470613</td>
+      <td>48.3885154333489</td>
+      <td>22.431</td>
+      <td>5.398</td>
+      <td>2.942</td>
+      <td>75.912</td>
+      <td>73.082</td>
+      <td>74.453</td>
+      <td>81.699</td>
+      <td>...</td>
+      <td>3.1</td>
+      <td>..</td>
+      <td>11413449</td>
+      <td>26.267</td>
+      <td>-0.317427606600439</td>
+      <td>1.046</td>
+      <td>32038217</td>
+      <td>73.733</td>
+      <td>2.47298875191541</td>
+      <td>2020</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>West Bank and Gaza</th>
+      <td>75.1592317201693</td>
+      <td>6.01200482818728</td>
+      <td>69.1472268919821</td>
+      <td>28.8</td>
+      <td>3.489</td>
+      <td>3.57</td>
+      <td>76.683</td>
+      <td>72.164</td>
+      <td>74.403</td>
+      <td>82.815</td>
+      <td>...</td>
+      <td>3.7</td>
+      <td>..</td>
+      <td>1118249</td>
+      <td>23.281</td>
+      <td>1.2952752682179</td>
+      <td>1.051</td>
+      <td>3685020</td>
+      <td>76.719</td>
+      <td>2.8508765124279</td>
+      <td>2020</td>
+    </tr>
+    <tr>
+      <th>World</th>
+      <td>55.3545684516828</td>
+      <td>14.5279438228773</td>
+      <td>39.6127367015018</td>
+      <td>17.226395822445</td>
+      <td>8.03336842322587</td>
+      <td>2.29962648746436</td>
+      <td>74.8573033759887</td>
+      <td>69.799704821776</td>
+      <td>72.2438221110764</td>
+      <td>119.443111464671</td>
+      <td>...</td>
+      <td>6.1</td>
+      <td>..</td>
+      <td>3435440919</td>
+      <td>43.9362953861523</td>
+      <td>0.0245037316745993</td>
+      <td>1.05948444967827</td>
+      <td>4383700170</td>
+      <td>56.0637046138476</td>
+      <td>1.79829477842566</td>
+      <td>2020</td>
+    </tr>
+    <tr>
+      <th>Yemen, Rep.</th>
+      <td>75.1537231559569</td>
+      <td>4.7613542134381</td>
+      <td>70.3923689425188</td>
+      <td>31.252</td>
+      <td>6.509</td>
+      <td>3.886</td>
+      <td>67.885</td>
+      <td>61.636</td>
+      <td>64.65</td>
+      <td>163.202</td>
+      <td>...</td>
+      <td>12.7</td>
+      <td>..</td>
+      <td>20045810</td>
+      <td>62.092</td>
+      <td>1.29296541480667</td>
+      <td>1.059</td>
+      <td>12238236</td>
+      <td>37.908</td>
+      <td>3.99974403498889</td>
+      <td>2020</td>
+    </tr>
+    <tr>
+      <th>Zambia</th>
+      <td>83.1845162629024</td>
+      <td>3.16883578918599</td>
+      <td>80.0156804737164</td>
+      <td>34.953</td>
+      <td>6.602</td>
+      <td>4.379</td>
+      <td>65.043</td>
+      <td>59.643</td>
+      <td>62.38</td>
+      <td>225.21</td>
+      <td>...</td>
+      <td>12.2</td>
+      <td>..</td>
+      <td>10480465</td>
+      <td>55.371</td>
+      <td>1.93290333786957</td>
+      <td>1.011</td>
+      <td>8447250</td>
+      <td>44.629</td>
+      <td>4.18973799229941</td>
+      <td>2020</td>
+    </tr>
+    <tr>
+      <th>Zimbabwe</th>
+      <td>80.285254859982</td>
+      <td>6.08690279667854</td>
+      <td>74.1983520633034</td>
+      <td>31.009</td>
+      <td>8.132</td>
+      <td>3.545</td>
+      <td>63.862</td>
+      <td>58.129</td>
+      <td>61.124</td>
+      <td>295.007</td>
+      <td>...</td>
+      <td>14.8</td>
+      <td>..</td>
+      <td>10617452</td>
+      <td>67.758</td>
+      <td>1.98389097289518</td>
+      <td>1.024</td>
+      <td>5052214</td>
+      <td>32.242</td>
+      <td>2.13042091541727</td>
+      <td>2020</td>
+    </tr>
+  </tbody>
+</table>
+<p>266 rows × 138 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[118]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Extract 2000 data</span>
+
+<span class="n">wb_population</span><span class="p">[</span><span class="s1">&#39;2000 [YR2000]&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+
+<span class="n">wb_population_2000</span> <span class="o">=</span> <span class="n">wb_population</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,[</span><span class="s1">&#39;Country Name&#39;</span><span class="p">,</span><span class="s1">&#39;Series Name&#39;</span><span class="p">,</span><span class="s1">&#39;2000 [YR2000]&#39;</span><span class="p">]]</span>
+
+<span class="n">wb_population_2000</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+
+<span class="n">wb_population_2000_cube</span> <span class="o">=</span> <span class="n">wb_population_2000</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span>
+                            <span class="n">index</span> <span class="o">=</span> <span class="s2">&quot;Country Name&quot;</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Series Name&quot;</span><span class="p">],</span>
+                            <span class="n">values</span> <span class="o">=</span> <span class="s2">&quot;2000 [YR2000]&quot;</span><span class="p">,</span> <span class="n">aggfunc</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">)</span>
+<span class="n">wb_population_2000_cube</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2000</span>
+<span class="n">wb_population_2000_cube</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[118]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Series Name</th>
+      <th>Age dependency ratio (% of working-age population)</th>
+      <th>Age dependency ratio, old</th>
+      <th>Age dependency ratio, young</th>
+      <th>Birth rate, crude (per 1,000 people)</th>
+      <th>Death rate, crude (per 1,000 people)</th>
+      <th>Fertility rate, total (births per woman)</th>
+      <th>Life expectancy at birth, female (years)</th>
+      <th>Life expectancy at birth, male (years)</th>
+      <th>Life expectancy at birth, total (years)</th>
+      <th>Mortality rate, adult, female (per 1,000 female adults)</th>
+      <th>...</th>
+      <th>Probability of dying among youth ages 20-24 years (per 1,000)</th>
+      <th>Probability of dying at age 5-14 years (per 1,000 children age 5)</th>
+      <th>Rural population</th>
+      <th>Rural population (% of total population)</th>
+      <th>Rural population growth (annual %)</th>
+      <th>Sex ratio at birth (male births per female births)</th>
+      <th>Urban population</th>
+      <th>Urban population (% of total population)</th>
+      <th>Urban population growth (annual %)</th>
+      <th>year</th>
+    </tr>
+    <tr>
+      <th>Country Name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Afghanistan</th>
+      <td>108.346634638347</td>
+      <td>4.76031425052708</td>
+      <td>103.58632038782</td>
+      <td>49.664</td>
+      <td>12.096</td>
+      <td>7.534</td>
+      <td>56.858</td>
+      <td>53.762</td>
+      <td>55.298</td>
+      <td>290.083</td>
+      <td>...</td>
+      <td>15.7</td>
+      <td>..</td>
+      <td>15228282</td>
+      <td>77.922</td>
+      <td>1.32580608474027</td>
+      <td>1.065</td>
+      <td>4314700</td>
+      <td>22.078</td>
+      <td>1.86137729962901</td>
+      <td>2000</td>
+    </tr>
+    <tr>
+      <th>Africa Eastern and Southern</th>
+      <td>92.0447323060712</td>
+      <td>5.46284227621415</td>
+      <td>85.7689305616506</td>
+      <td>40.5282366204827</td>
+      <td>13.7756980933728</td>
+      <td>5.52355316105243</td>
+      <td>53.6622075489618</td>
+      <td>50.2368403625047</td>
+      <td>51.9644813247726</td>
+      <td>373.855468210979</td>
+      <td>...</td>
+      <td>24.2033654636815</td>
+      <td>..</td>
+      <td>286048935</td>
+      <td>71.2272200649119</td>
+      <td>2.17773260691155</td>
+      <td>1.03204438877095</td>
+      <td>115551653</td>
+      <td>28.7727799350881</td>
+      <td>3.60226233978761</td>
+      <td>2000</td>
+    </tr>
+    <tr>
+      <th>Africa Western and Central</th>
+      <td>90.0511094007867</td>
+      <td>5.85597363363416</td>
+      <td>84.0436144883948</td>
+      <td>43.199552914664</td>
+      <td>15.562004323077</td>
+      <td>6.02317868901341</td>
+      <td>51.3825284555454</td>
+      <td>49.0777124990516</td>
+      <td>50.221953875359</td>
+      <td>346.300398339523</td>
+      <td>...</td>
+      <td>17.1785761620976</td>
+      <td>..</td>
+      <td>174339008</td>
+      <td>64.6629506217044</td>
+      <td>2.00262708868885</td>
+      <td>1.04213268835693</td>
+      <td>95272890</td>
+      <td>35.3370493782956</td>
+      <td>4.14518949083499</td>
+      <td>2000</td>
+    </tr>
+    <tr>
+      <th>Albania</th>
+      <td>59.6572954321563</td>
+      <td>12.4883578855749</td>
+      <td>47.1689375465814</td>
+      <td>17.076</td>
+      <td>5.798</td>
+      <td>2.231</td>
+      <td>78.419</td>
+      <td>72.646</td>
+      <td>75.404</td>
+      <td>58.575</td>
+      <td>...</td>
+      <td>5.3</td>
+      <td>..</td>
+      <td>1799636</td>
+      <td>58.259</td>
+      <td>-1.61439403235174</td>
+      <td>1.103</td>
+      <td>1289391</td>
+      <td>41.741</td>
+      <td>0.742478629285177</td>
+      <td>2000</td>
+    </tr>
+    <tr>
+      <th>Algeria</th>
+      <td>61.5008804071121</td>
+      <td>6.85352579262486</td>
+      <td>54.6473546144873</td>
+      <td>19.543</td>
+      <td>5.037</td>
+      <td>2.566</td>
+      <td>71.949</td>
+      <td>69.068</td>
+      <td>70.478</td>
+      <td>122.518</td>
+      <td>...</td>
+      <td>5.2</td>
+      <td>..</td>
+      <td>12334776</td>
+      <td>40.081</td>
+      <td>-0.576456854823036</td>
+      <td>1.048</td>
+      <td>18439845</td>
+      <td>59.919</td>
+      <td>2.74811230466512</td>
+      <td>2000</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>West Bank and Gaza</th>
+      <td>99.6553017595667</td>
+      <td>4.45818834257198</td>
+      <td>95.1971134169947</td>
+      <td>40.9</td>
+      <td>4.5</td>
+      <td>5.443</td>
+      <td>72.449</td>
+      <td>68.321</td>
+      <td>70.388</td>
+      <td>125.801</td>
+      <td>...</td>
+      <td>4.7</td>
+      <td>..</td>
+      <td>819109</td>
+      <td>28.031</td>
+      <td>1.766436960194</td>
+      <td>1.051</td>
+      <td>2103044</td>
+      <td>71.969</td>
+      <td>2.86415437260134</td>
+      <td>2000</td>
+    </tr>
+    <tr>
+      <th>World</th>
+      <td>60.4460097775205</td>
+      <td>10.948829738329</td>
+      <td>48.0504792356939</td>
+      <td>21.8417244542754</td>
+      <td>8.49359520780749</td>
+      <td>2.71846496860982</td>
+      <td>70.0851347449063</td>
+      <td>65.4730642057711</td>
+      <td>67.7004016982228</td>
+      <td>146.190910158284</td>
+      <td>...</td>
+      <td>8.7</td>
+      <td>..</td>
+      <td>3276590093</td>
+      <td>53.3421422848018</td>
+      <td>0.636925490036376</td>
+      <td>1.07650956523676</td>
+      <td>2866001759</td>
+      <td>46.6578577151982</td>
+      <td>2.18768310048951</td>
+      <td>2000</td>
+    </tr>
+    <tr>
+      <th>Yemen, Rep.</th>
+      <td>108.441682831442</td>
+      <td>5.58160294895631</td>
+      <td>102.860079882486</td>
+      <td>40.24</td>
+      <td>7.94</td>
+      <td>6.318</td>
+      <td>64.552</td>
+      <td>60.619</td>
+      <td>62.588</td>
+      <td>184.41</td>
+      <td>...</td>
+      <td>7.2</td>
+      <td>..</td>
+      <td>13735499</td>
+      <td>73.733</td>
+      <td>2.10273689211718</td>
+      <td>1.061</td>
+      <td>4893201</td>
+      <td>26.267</td>
+      <td>4.77890817937106</td>
+      <td>2000</td>
+    </tr>
+    <tr>
+      <th>Zambia</th>
+      <td>102.618953778686</td>
+      <td>4.51849827640033</td>
+      <td>98.1004555022857</td>
+      <td>45.866</td>
+      <td>16.876</td>
+      <td>5.926</td>
+      <td>46.448</td>
+      <td>43.895</td>
+      <td>45.231</td>
+      <td>542.937</td>
+      <td>...</td>
+      <td>30.1</td>
+      <td>..</td>
+      <td>6448823</td>
+      <td>65.198</td>
+      <td>3.46847169775023</td>
+      <td>1.007</td>
+      <td>3442313</td>
+      <td>34.802</td>
+      <td>1.46484423776558</td>
+      <td>2000</td>
+    </tr>
+    <tr>
+      <th>Zimbabwe</th>
+      <td>82.0821630753112</td>
+      <td>5.600283708239</td>
+      <td>76.4818793670722</td>
+      <td>35.637</td>
+      <td>16.801</td>
+      <td>3.974</td>
+      <td>46.476</td>
+      <td>42.941</td>
+      <td>44.686</td>
+      <td>652.635</td>
+      <td>...</td>
+      <td>24.4</td>
+      <td>..</td>
+      <td>7839526</td>
+      <td>66.242</td>
+      <td>0.385433466867793</td>
+      <td>1.025</td>
+      <td>3995150</td>
+      <td>33.758</td>
+      <td>2.22892978426192</td>
+      <td>2000</td>
+    </tr>
+  </tbody>
+</table>
+<p>266 rows × 138 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[120]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Combine 2000 and 2020 data and rename variables</span>
+
+<span class="n">wb_population_20years</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">wb_population_2000_cube</span><span class="p">,</span><span class="n">wb_population_2020_cube</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">wb_population_20years</span>
+
+<span class="n">wb_population_20years</span> <span class="o">=</span> <span class="n">wb_population_20years</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Population ages 65 and above (</span><span class="si">% o</span><span class="s2">f total population)&quot;</span><span class="p">:</span> <span class="s2">&quot;pop_over_65&quot;</span><span class="p">,</span>
+                                                                <span class="s2">&quot;Fertility rate, total (births per woman)&quot;</span><span class="p">:</span><span class="s2">&quot;fertility&quot;</span><span class="p">,</span>
+                                                                <span class="s2">&quot;Life expectancy at birth, total (years)&quot;</span><span class="p">:</span><span class="s2">&quot;life_expectancy&quot;</span><span class="p">,</span>
+                                                                <span class="s2">&quot;Mortality rate, infant (per 1,000 live births)&quot;</span><span class="p">:</span><span class="s2">&quot;mortality_infant&quot;</span><span class="p">,</span>
+                                                                <span class="s2">&quot;Death rate, crude (per 1,000 people)&quot;</span><span class="p">:</span> <span class="s2">&quot;death_rate&quot;</span>
+                                                                 <span class="p">})</span>
+
+<span class="n">wb_population_20years_s</span> <span class="o">=</span> <span class="n">wb_population_20years</span><span class="p">[[</span><span class="s1">&#39;year&#39;</span><span class="p">,</span><span class="s1">&#39;pop_over_65&#39;</span><span class="p">,</span><span class="s1">&#39;fertility&#39;</span><span class="p">,</span><span class="s1">&#39;life_expectancy&#39;</span><span class="p">,</span><span class="s1">&#39;mortality_infant&#39;</span><span class="p">,</span><span class="s1">&#39;death_rate&#39;</span><span class="p">]]</span> 
+
+<span class="n">wb_population_20years_s</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[120]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Series Name</th>
+      <th>year</th>
+      <th>pop_over_65</th>
+      <th>fertility</th>
+      <th>life_expectancy</th>
+      <th>mortality_infant</th>
+      <th>death_rate</th>
+    </tr>
+    <tr>
+      <th>Country Name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Afghanistan</th>
+      <td>2000</td>
+      <td>2.28480734708738</td>
+      <td>7.534</td>
+      <td>55.298</td>
+      <td>90.6</td>
+      <td>12.096</td>
+    </tr>
+    <tr>
+      <th>Africa Eastern and Southern</th>
+      <td>2000</td>
+      <td>2.85665995891157</td>
+      <td>5.52355316105243</td>
+      <td>51.9644813247726</td>
+      <td>85.8317260053599</td>
+      <td>13.7756980933728</td>
+    </tr>
+    <tr>
+      <th>Africa Western and Central</th>
+      <td>2000</td>
+      <td>3.0837199960944</td>
+      <td>6.02317868901341</td>
+      <td>50.221953875359</td>
+      <td>99.1400441932479</td>
+      <td>15.562004323077</td>
+    </tr>
+    <tr>
+      <th>Albania</th>
+      <td>2000</td>
+      <td>7.82196406339934</td>
+      <td>2.231</td>
+      <td>75.404</td>
+      <td>24.1</td>
+      <td>5.798</td>
+    </tr>
+    <tr>
+      <th>Algeria</th>
+      <td>2000</td>
+      <td>4.24364608746928</td>
+      <td>2.566</td>
+      <td>70.478</td>
+      <td>35.6</td>
+      <td>5.037</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ol>
+<li>The ratio of population ages 65 and above - Is population ageing a global issue?</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[121]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">wb_population_20years_s</span><span class="o">.</span><span class="n">pop_over_65</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">wb_population_20years_s</span><span class="o">.</span><span class="n">pop_over_65</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">)</span>
+<span class="n">wb_population_20years_s</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;year&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">pop_over_65</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>/var/folders/bt/lw9rpr2s5pddmhwfn_jz88jh0000gn/T/ipykernel_81315/2379163029.py:1: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  wb_population_20years_s.pop_over_65 = pd.to_numeric(wb_population_20years_s.pop_over_65, errors=&#39;coerce&#39;)
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[121]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>count</th>
+      <th>mean</th>
+      <th>std</th>
+      <th>min</th>
+      <th>25%</th>
+      <th>50%</th>
+      <th>75%</th>
+      <th>max</th>
+    </tr>
+    <tr>
+      <th>year</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2000</th>
+      <td>261.0</td>
+      <td>6.840118</td>
+      <td>4.618148</td>
+      <td>0.897588</td>
+      <td>3.249595</td>
+      <td>5.004304</td>
+      <td>10.156290</td>
+      <td>22.229752</td>
+    </tr>
+    <tr>
+      <th>2020</th>
+      <td>261.0</td>
+      <td>9.473867</td>
+      <td>6.524832</td>
+      <td>1.255821</td>
+      <td>3.947724</td>
+      <td>7.638112</td>
+      <td>14.558149</td>
+      <td>35.849900</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Yes, the median value for the ratio of population ages 65 and above is more than 7% which means more than half of countries are facing the population ageing challenges.</p>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ol>
+<li>The life expectancy at birth - What can we say about life expectancy?</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[122]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">wb_population_20years_s</span><span class="o">.</span><span class="n">life_expectancy</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">wb_population_20years_s</span><span class="o">.</span><span class="n">life_expectancy</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">)</span>
+<span class="n">wb_population_20years_s</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;year&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">life_expectancy</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">density</span><span class="p">(</span><span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>/var/folders/bt/lw9rpr2s5pddmhwfn_jz88jh0000gn/T/ipykernel_81315/930560071.py:1: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  wb_population_20years_s.life_expectancy = pd.to_numeric(wb_population_20years_s.life_expectancy, errors=&#39;coerce&#39;)
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[122]:</div>
 
 
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>1309</pre>
+<pre>year
+2000    AxesSubplot(0.125,0.125;0.775x0.755)
+2020    AxesSubplot(0.125,0.125;0.775x0.755)
+Name: life_expectancy, dtype: object</pre>
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+<div class="jp-RenderedImage jp-OutputArea-output ">
+<img src="data:image/png;base64,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
+"
+class="
+jp-needs-light-background
+"
+>
 </div>
 
 </div>
@@ -16051,7 +15967,7 @@ function displayQuickchartButton(domScope) {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>In the next labs, will work with DataFrames in more detail. For now, please complete the short exercises below and submit your notebook to Canvas,</p>
+<p>The overall distribution of life expectancy shift to the right meaning an increased life expectancy from 2000 to 2020. People generally can live longer.</p>
 
 </div>
 </div>
@@ -16063,7 +15979,9 @@ function displayQuickchartButton(domScope) {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Exercises">Exercises<a class="anchor-link" href="#Exercises">&#182;</a></h2><p><strong>1. Change the current working directory to the folder in <code>cmps3160/_demos/data/</code>.</strong></p>
+<ol>
+<li>Fertility rate - What can we say about fertility rates?</li>
+</ol>
 
 </div>
 </div>
@@ -16073,10 +15991,11 @@ function displayQuickchartButton(domScope) {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[123]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">cd</span> /content/cmps3160/_demos/data/
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">wb_population_20years_s</span><span class="o">.</span><span class="n">fertility</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">wb_population_20years_s</span><span class="o">.</span><span class="n">fertility</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">)</span>
+<span class="n">wb_population_20years_s</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;year&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">fertility</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -16097,64 +16016,33 @@ function displayQuickchartButton(domScope) {
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>/content/cmps3160/_demos/data
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>/var/folders/bt/lw9rpr2s5pddmhwfn_jz88jh0000gn/T/ipykernel_81315/885290609.py:1: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  wb_population_20years_s.fertility = pd.to_numeric(wb_population_20years_s.fertility, errors=&#39;coerce&#39;)
 </pre>
 </div>
 </div>
 
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[123]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>year
+2000    AxesSubplot(0.125,0.125;0.775x0.755)
+2020    AxesSubplot(0.125,0.125;0.775x0.755)
+Name: fertility, dtype: object</pre>
 </div>
 
 </div>
-
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Expected output:</p>
-
-<pre><code>/content/cmps3160/_demos/data</code></pre>
-
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><strong>2. List the contents of this directory.</strong></p>
-
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>ls /content/cmps3160/_demos/data
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
 
 <div class="jp-OutputArea-child">
 
@@ -16162,345 +16050,15 @@ function displayQuickchartButton(domScope) {
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>adult.csv      boundry.png  nba_salaries.csv  review_polarity.zip
-billboard.csv  iris.csv     nba_stats.csv     titanic.csv
-bodyfat.csv    iris.png     religon.csv
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Expected output:</p>
-
-<pre><code>adult.csv      boundry.png  nba_salaries.csv  review_polarity.zip
-billboard.csv  iris.csv     nba_stats.csv     titanic.csv
-bodyfat.csv    iris.png     religon.csv</code></pre>
-
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><strong>3. Oh look, there's another <code>titanic.csv</code> file in here. Read it into a new DataFrame called <code>df2</code> and print the first row.</strong></p>
-
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[26]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="n">df2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/content/cmps3160/_demos/data/titanic.csv&#39;</span><span class="p">)</span>
-<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
 
 
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[26]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-
-  <div id="df-e18a12b7-2c8b-4d52-95d8-30c329316715" class="colab-df-container">
-    <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>pclass</th>
-      <th>survived</th>
-      <th>name</th>
-      <th>sex</th>
-      <th>age</th>
-      <th>sibsp</th>
-      <th>parch</th>
-      <th>ticket</th>
-      <th>fare</th>
-      <th>cabin</th>
-      <th>embarked</th>
-      <th>boat</th>
-      <th>body</th>
-      <th>home.dest</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1</td>
-      <td>1</td>
-      <td>Allen, Miss. Elisabeth Walton</td>
-      <td>female</td>
-      <td>29.0000</td>
-      <td>0</td>
-      <td>0</td>
-      <td>24160</td>
-      <td>211.3375</td>
-      <td>B5</td>
-      <td>S</td>
-      <td>2</td>
-      <td>NaN</td>
-      <td>St Louis, MO</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>1</td>
-      <td>1</td>
-      <td>Allison, Master. Hudson Trevor</td>
-      <td>male</td>
-      <td>0.9167</td>
-      <td>1</td>
-      <td>2</td>
-      <td>113781</td>
-      <td>151.5500</td>
-      <td>C22 C26</td>
-      <td>S</td>
-      <td>11</td>
-      <td>NaN</td>
-      <td>Montreal, PQ / Chesterville, ON</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>1</td>
-      <td>0</td>
-      <td>Allison, Miss. Helen Loraine</td>
-      <td>female</td>
-      <td>2.0000</td>
-      <td>1</td>
-      <td>2</td>
-      <td>113781</td>
-      <td>151.5500</td>
-      <td>C22 C26</td>
-      <td>S</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>Montreal, PQ / Chesterville, ON</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>1</td>
-      <td>0</td>
-      <td>Allison, Mr. Hudson Joshua Creighton</td>
-      <td>male</td>
-      <td>30.0000</td>
-      <td>1</td>
-      <td>2</td>
-      <td>113781</td>
-      <td>151.5500</td>
-      <td>C22 C26</td>
-      <td>S</td>
-      <td>NaN</td>
-      <td>135.0</td>
-      <td>Montreal, PQ / Chesterville, ON</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>1</td>
-      <td>0</td>
-      <td>Allison, Mrs. Hudson J C (Bessie Waldo Daniels)</td>
-      <td>female</td>
-      <td>25.0000</td>
-      <td>1</td>
-      <td>2</td>
-      <td>113781</td>
-      <td>151.5500</td>
-      <td>C22 C26</td>
-      <td>S</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>Montreal, PQ / Chesterville, ON</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-    <div class="colab-df-buttons">
-
-  <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-e18a12b7-2c8b-4d52-95d8-30c329316715')"
-            title="Convert this dataframe to an interactive table."
-            style="display:none;">
-
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
-    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
-  </svg>
-    </button>
-
-  <style>
-    .colab-df-container {
-      display:flex;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    .colab-df-buttons div {
-      margin-bottom: 4px;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-    <script>
-      const buttonEl =
-        document.querySelector('#df-e18a12b7-2c8b-4d52-95d8-30c329316715 button.colab-df-convert');
-      buttonEl.style.display =
-        google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-      async function convertToInteractive(key) {
-        const element = document.querySelector('#df-e18a12b7-2c8b-4d52-95d8-30c329316715');
-        const dataTable =
-          await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                    [key], {});
-        if (!dataTable) return;
-
-        const docLinkHtml = 'Like what you see? Visit the ' +
-          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-          + ' to learn more about interactive tables.';
-        element.innerHTML = '';
-        dataTable['output_type'] = 'display_data';
-        await google.colab.output.renderOutput(dataTable, element);
-        const docLink = document.createElement('div');
-        docLink.innerHTML = docLinkHtml;
-        element.appendChild(docLink);
-      }
-    </script>
-  </div>
-
-
-<div id="df-b9e46c4e-5ab6-47b5-8f17-3f504f327379">
-  <button class="colab-df-quickchart" onclick="quickchart('df-b9e46c4e-5ab6-47b5-8f17-3f504f327379')"
-            title="Suggest charts."
-            style="display:none;">
-
-<svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-     width="24px">
-    <g>
-        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
-    </g>
-</svg>
-  </button>
-
-<style>
-  .colab-df-quickchart {
-    background-color: #E8F0FE;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    display: none;
-    fill: #1967D2;
-    height: 32px;
-    padding: 0 0 0 0;
-    width: 32px;
-  }
-
-  .colab-df-quickchart:hover {
-    background-color: #E2EBFA;
-    box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-    fill: #174EA6;
-  }
-
-  [theme=dark] .colab-df-quickchart {
-    background-color: #3B4455;
-    fill: #D2E3FC;
-  }
-
-  [theme=dark] .colab-df-quickchart:hover {
-    background-color: #434B5C;
-    box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-    filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-    fill: #FFFFFF;
-  }
-</style>
-
-  <script>
-    async function quickchart(key) {
-      const charts = await google.colab.kernel.invokeFunction(
-          'suggestCharts', [key], {});
-    }
-    (() => {
-      let quickchartButtonEl =
-        document.querySelector('#df-b9e46c4e-5ab6-47b5-8f17-3f504f327379 button');
-      quickchartButtonEl.style.display =
-        google.colab.kernel.accessAllowed ? 'block' : 'none';
-    })();
-  </script>
-</div>
-    </div>
-  </div>
-
+<div class="jp-RenderedImage jp-OutputArea-output ">
+<img src="data:image/png;base64,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
+"
+class="
+jp-needs-light-background
+"
+>
 </div>
 
 </div>
@@ -16516,408 +16074,7 @@ bodyfat.csv    iris.png     religon.csv</code></pre>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><strong>4. DataFrame objects have a  <code>.describe()</code> method that summarizing the data. Run it below:</strong></p>
-
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[34]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="n">df2</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[34]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-
-  <div id="df-b86dfe75-b431-49c7-8e19-792ff0ebf953" class="colab-df-container">
-    <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>pclass</th>
-      <th>survived</th>
-      <th>age</th>
-      <th>sibsp</th>
-      <th>parch</th>
-      <th>fare</th>
-      <th>body</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>count</th>
-      <td>1309.000000</td>
-      <td>1309.000000</td>
-      <td>1046.000000</td>
-      <td>1309.000000</td>
-      <td>1309.000000</td>
-      <td>1308.000000</td>
-      <td>121.000000</td>
-    </tr>
-    <tr>
-      <th>mean</th>
-      <td>2.294882</td>
-      <td>0.381971</td>
-      <td>29.881135</td>
-      <td>0.498854</td>
-      <td>0.385027</td>
-      <td>33.295479</td>
-      <td>160.809917</td>
-    </tr>
-    <tr>
-      <th>std</th>
-      <td>0.837836</td>
-      <td>0.486055</td>
-      <td>14.413500</td>
-      <td>1.041658</td>
-      <td>0.865560</td>
-      <td>51.758668</td>
-      <td>97.696922</td>
-    </tr>
-    <tr>
-      <th>min</th>
-      <td>1.000000</td>
-      <td>0.000000</td>
-      <td>0.166700</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>1.000000</td>
-    </tr>
-    <tr>
-      <th>25%</th>
-      <td>2.000000</td>
-      <td>0.000000</td>
-      <td>21.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>7.895800</td>
-      <td>72.000000</td>
-    </tr>
-    <tr>
-      <th>50%</th>
-      <td>3.000000</td>
-      <td>0.000000</td>
-      <td>28.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>14.454200</td>
-      <td>155.000000</td>
-    </tr>
-    <tr>
-      <th>75%</th>
-      <td>3.000000</td>
-      <td>1.000000</td>
-      <td>39.000000</td>
-      <td>1.000000</td>
-      <td>0.000000</td>
-      <td>31.275000</td>
-      <td>256.000000</td>
-    </tr>
-    <tr>
-      <th>max</th>
-      <td>3.000000</td>
-      <td>1.000000</td>
-      <td>80.000000</td>
-      <td>8.000000</td>
-      <td>9.000000</td>
-      <td>512.329200</td>
-      <td>328.000000</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-    <div class="colab-df-buttons">
-
-  <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-b86dfe75-b431-49c7-8e19-792ff0ebf953')"
-            title="Convert this dataframe to an interactive table."
-            style="display:none;">
-
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
-    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
-  </svg>
-    </button>
-
-  <style>
-    .colab-df-container {
-      display:flex;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    .colab-df-buttons div {
-      margin-bottom: 4px;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-    <script>
-      const buttonEl =
-        document.querySelector('#df-b86dfe75-b431-49c7-8e19-792ff0ebf953 button.colab-df-convert');
-      buttonEl.style.display =
-        google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-      async function convertToInteractive(key) {
-        const element = document.querySelector('#df-b86dfe75-b431-49c7-8e19-792ff0ebf953');
-        const dataTable =
-          await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                    [key], {});
-        if (!dataTable) return;
-
-        const docLinkHtml = 'Like what you see? Visit the ' +
-          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-          + ' to learn more about interactive tables.';
-        element.innerHTML = '';
-        dataTable['output_type'] = 'display_data';
-        await google.colab.output.renderOutput(dataTable, element);
-        const docLink = document.createElement('div');
-        docLink.innerHTML = docLinkHtml;
-        element.appendChild(docLink);
-      }
-    </script>
-  </div>
-
-
-<div id="df-084b469c-5e08-4fe0-b649-b303e77c080c">
-  <button class="colab-df-quickchart" onclick="quickchart('df-084b469c-5e08-4fe0-b649-b303e77c080c')"
-            title="Suggest charts."
-            style="display:none;">
-
-<svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-     width="24px">
-    <g>
-        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
-    </g>
-</svg>
-  </button>
-
-<style>
-  .colab-df-quickchart {
-    background-color: #E8F0FE;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    display: none;
-    fill: #1967D2;
-    height: 32px;
-    padding: 0 0 0 0;
-    width: 32px;
-  }
-
-  .colab-df-quickchart:hover {
-    background-color: #E2EBFA;
-    box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-    fill: #174EA6;
-  }
-
-  [theme=dark] .colab-df-quickchart {
-    background-color: #3B4455;
-    fill: #D2E3FC;
-  }
-
-  [theme=dark] .colab-df-quickchart:hover {
-    background-color: #434B5C;
-    box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-    filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-    fill: #FFFFFF;
-  }
-</style>
-
-  <script>
-    async function quickchart(key) {
-      const charts = await google.colab.kernel.invokeFunction(
-          'suggestCharts', [key], {});
-    }
-    (() => {
-      let quickchartButtonEl =
-        document.querySelector('#df-084b469c-5e08-4fe0-b649-b303e77c080c button');
-      quickchartButtonEl.style.display =
-        google.colab.kernel.accessAllowed ? 'block' : 'none';
-    })();
-  </script>
-</div>
-    </div>
-  </div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Expected output:</p>
-<table>
-<thead><tr>
-<th style="text-align:left"></th>
-<th style="text-align:right">pclass</th>
-<th style="text-align:right">survived</th>
-<th style="text-align:right">age</th>
-<th style="text-align:right">sibsp</th>
-<th style="text-align:right">parch</th>
-<th style="text-align:right">fare</th>
-<th style="text-align:right">body</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">count</td>
-<td style="text-align:right">1309</td>
-<td style="text-align:right">1309</td>
-<td style="text-align:right">1046</td>
-<td style="text-align:right">1309</td>
-<td style="text-align:right">1309</td>
-<td style="text-align:right">1308</td>
-<td style="text-align:right">121</td>
-</tr>
-<tr>
-<td style="text-align:left">mean</td>
-<td style="text-align:right">2.29488</td>
-<td style="text-align:right">0.381971</td>
-<td style="text-align:right">29.8811</td>
-<td style="text-align:right">0.498854</td>
-<td style="text-align:right">0.385027</td>
-<td style="text-align:right">33.2955</td>
-<td style="text-align:right">160.81</td>
-</tr>
-<tr>
-<td style="text-align:left">std</td>
-<td style="text-align:right">0.837836</td>
-<td style="text-align:right">0.486055</td>
-<td style="text-align:right">14.4135</td>
-<td style="text-align:right">1.04166</td>
-<td style="text-align:right">0.86556</td>
-<td style="text-align:right">51.7587</td>
-<td style="text-align:right">97.6969</td>
-</tr>
-<tr>
-<td style="text-align:left">min</td>
-<td style="text-align:right">1</td>
-<td style="text-align:right">0</td>
-<td style="text-align:right">0.1667</td>
-<td style="text-align:right">0</td>
-<td style="text-align:right">0</td>
-<td style="text-align:right">0</td>
-<td style="text-align:right">1</td>
-</tr>
-<tr>
-<td style="text-align:left">25%</td>
-<td style="text-align:right">2</td>
-<td style="text-align:right">0</td>
-<td style="text-align:right">21</td>
-<td style="text-align:right">0</td>
-<td style="text-align:right">0</td>
-<td style="text-align:right">7.8958</td>
-<td style="text-align:right">72</td>
-</tr>
-<tr>
-<td style="text-align:left">50%</td>
-<td style="text-align:right">3</td>
-<td style="text-align:right">0</td>
-<td style="text-align:right">28</td>
-<td style="text-align:right">0</td>
-<td style="text-align:right">0</td>
-<td style="text-align:right">14.4542</td>
-<td style="text-align:right">155</td>
-</tr>
-<tr>
-<td style="text-align:left">75%</td>
-<td style="text-align:right">3</td>
-<td style="text-align:right">1</td>
-<td style="text-align:right">39</td>
-<td style="text-align:right">1</td>
-<td style="text-align:right">0</td>
-<td style="text-align:right">31.275</td>
-<td style="text-align:right">256</td>
-</tr>
-<tr>
-<td style="text-align:left">max</td>
-<td style="text-align:right">3</td>
-<td style="text-align:right">1</td>
-<td style="text-align:right">80</td>
-<td style="text-align:right">8</td>
-<td style="text-align:right">9</td>
-<td style="text-align:right">512.329</td>
-<td style="text-align:right">328</td>
-</tr>
-</tbody>
-</table>
+<p>The fertility rates have the tendency to decline. In 2020, no country has an average of fertility rate exceeding 7. More than half of countries have average fertility rates lower than 2 which means more families are likely to have only one or two children.</p>
 
 </div>
 </div>
@@ -16929,86 +16086,8 @@ bodyfat.csv    iris.png     religon.csv</code></pre>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ol>
-<li>By looking at the output and reading the <a href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.describe.html">method documentation</a> answer the following questions:</li>
-</ol>
-<p><strong>5a. What fraction of passengers survived (rounded to two decimal places)?</strong></p>
-
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>38.19%</p>
-
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><strong>5b. What was the median fare (rounded to the nearest dollar)?</strong></p>
-
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>$14</p>
-
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><strong>5c. Were there more 1st class passengers or 3rd class passengers?</strong></p>
-
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>There were more 3rd class passengers.</p>
-
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><strong>To submit:</strong></p>
-<ol>
-<li>File-&gt;Download .ipynb</li>
-<li>Upload the .ipynb file to the appropriate assignment in <a href="https://tulane.instructure.com/">Canvas</a></li>
-</ol>
+<p>Summary:</p>
+<p>Comparing the ratio of population ages 65 and above, life expectancy, and fertility rate in 2000 and 2020, we have more countries are encountering population ageing challenges. The increased life expectancy and declined fertility rates are two major direct driving forces.</p>
 
 </div>
 </div>
