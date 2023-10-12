@@ -14582,15 +14582,15 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <h1 id="Population-Ageing-in-the-World">Population Ageing in the World<a class="anchor-link" href="#Population-Ageing-in-the-World">&#182;</a></h1><p>Yu Liu</p>
 <p><a href="kellyyliu.github.io">Link to the Github Webpage</a></p>
 <p>Project Goal</p>
-<p>This project uses data from <a href="https://databank.worldbank.org/source/population-estimates-and-projections#advancedDownloadOptions">https://databank.worldbank.org/source/population-estimates-and-projections#advancedDownloadOptions</a> to illustrate the population ageing situation in the world.</p>
-<p>Population ageing is becoming an increasingly more serious issue for many countries. When a country has the ratio of population aged 65 and above is equal to or larger than 7%, that country can be regarded as entering into population ageing stage. The accompanying phenomena are increasing life expectancy and declining fertility rates. I use 2000 and 2020 population data for all countries to demonstrate those changes.</p>
+<p>This project uses data from <a href="https://databank.worldbank.org/source/population-estimates-and-projections#advancedDownloadOptions">https://databank.worldbank.org/source/population-estimates-and-projections#advancedDownloadOptions</a> to illustrate the population ageing trends in the world.</p>
+<p>Population ageing is becoming an increasingly more serious issue for many countries. When a country has the fraction of population aged 65 and above is equal to or larger than 7%, that country can be regarded as entering into population ageing society. The phenomenon is dominated by increasing life expectancy and declining fertility rates. I use 2000 and 2020 population data for all countries to demonstrate the trend.</p>
 <p>There are three questions I'd like to answer:</p>
 <ol>
 <li><p>Is population ageing a global issue?</p>
 </li>
-<li><p>What can we say about life expectancy?</p>
+<li><p>What can we tell from the life expectancy trend?</p>
 </li>
-<li><p>What can we say about fertility rates?</p>
+<li><p>What can we tell from the fertility rates changes?</p>
 </li>
 </ol>
 
@@ -14602,7 +14602,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[116]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[120]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Import data</span>
@@ -14631,7 +14631,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[116]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[120]:</div>
 
 
 
@@ -14815,7 +14815,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[117]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[121]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Extract 2020 data</span>
@@ -14848,7 +14848,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[117]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[121]:</div>
 
 
 
@@ -15200,7 +15200,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[118]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[122]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Extract 2000 data</span>
@@ -15233,7 +15233,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[118]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[122]:</div>
 
 
 
@@ -15585,7 +15585,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[120]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[123]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Combine 2000 and 2020 data and rename variables</span>
@@ -15600,9 +15600,9 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
                                                                 <span class="s2">&quot;Death rate, crude (per 1,000 people)&quot;</span><span class="p">:</span> <span class="s2">&quot;death_rate&quot;</span>
                                                                  <span class="p">})</span>
 
-<span class="n">wb_population_20years_s</span> <span class="o">=</span> <span class="n">wb_population_20years</span><span class="p">[[</span><span class="s1">&#39;year&#39;</span><span class="p">,</span><span class="s1">&#39;pop_over_65&#39;</span><span class="p">,</span><span class="s1">&#39;fertility&#39;</span><span class="p">,</span><span class="s1">&#39;life_expectancy&#39;</span><span class="p">,</span><span class="s1">&#39;mortality_infant&#39;</span><span class="p">,</span><span class="s1">&#39;death_rate&#39;</span><span class="p">]]</span> 
+<span class="n">wb_population_20years</span> <span class="o">=</span> <span class="n">wb_population_20years</span><span class="p">[[</span><span class="s1">&#39;year&#39;</span><span class="p">,</span><span class="s1">&#39;pop_over_65&#39;</span><span class="p">,</span><span class="s1">&#39;fertility&#39;</span><span class="p">,</span><span class="s1">&#39;life_expectancy&#39;</span><span class="p">,</span><span class="s1">&#39;mortality_infant&#39;</span><span class="p">,</span><span class="s1">&#39;death_rate&#39;</span><span class="p">]]</span> 
 
-<span class="n">wb_population_20years_s</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<span class="n">wb_population_20years</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -15620,7 +15620,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[120]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[123]:</div>
 
 
 
@@ -15725,7 +15725,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ol>
-<li>The ratio of population ages 65 and above - Is population ageing a global issue?</li>
+<li>The fraction of population ages 65 and above - Is population ageing a global issue?</li>
 </ol>
 
 </div>
@@ -15736,11 +15736,20 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[121]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[124]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">wb_population_20years_s</span><span class="o">.</span><span class="n">pop_over_65</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">wb_population_20years_s</span><span class="o">.</span><span class="n">pop_over_65</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">)</span>
-<span class="n">wb_population_20years_s</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;year&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">pop_over_65</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Descriptive statistics about the fraction of population ages 65 and above</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">wb_population_20years</span><span class="o">.</span><span class="n">dtypes</span><span class="p">)</span>
+
+<span class="n">wb_population_20years</span><span class="p">[</span><span class="s1">&#39;pop_over_65&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">wb_population_20years</span><span class="p">[</span><span class="s1">&#39;pop_over_65&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;..&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+
+<span class="n">wb_population_20years</span><span class="p">[</span><span class="s1">&#39;pop_over_65&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">wb_population_20years</span><span class="p">[</span><span class="s1">&#39;pop_over_65&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+
+<span class="n">wb_population_20years</span> <span class="o">=</span> <span class="n">wb_population_20years</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+
+<span class="n">wb_population_20years</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;year&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">pop_over_65</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -15761,13 +15770,15 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>/var/folders/bt/lw9rpr2s5pddmhwfn_jz88jh0000gn/T/ipykernel_81315/2379163029.py:1: SettingWithCopyWarning: 
-A value is trying to be set on a copy of a slice from a DataFrame.
-Try using .loc[row_indexer,col_indexer] = value instead
-
-See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
-  wb_population_20years_s.pop_over_65 = pd.to_numeric(wb_population_20years_s.pop_over_65, errors=&#39;coerce&#39;)
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Series Name
+year                 int64
+pop_over_65         object
+fertility           object
+life_expectancy     object
+mortality_infant    object
+death_rate          object
+dtype: object
 </pre>
 </div>
 </div>
@@ -15775,7 +15786,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[121]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[124]:</div>
 
 
 
@@ -15853,42 +15864,22 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 
 </div>
 
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Yes, the median value for the ratio of population ages 65 and above is more than 7% which means more than half of countries are facing the population ageing challenges.</p>
-
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ol>
-<li>The life expectancy at birth - What can we say about life expectancy?</li>
-</ol>
-
-</div>
-</div>
-</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[122]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[125]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">wb_population_20years_s</span><span class="o">.</span><span class="n">life_expectancy</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">wb_population_20years_s</span><span class="o">.</span><span class="n">life_expectancy</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">)</span>
-<span class="n">wb_population_20years_s</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;year&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">life_expectancy</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">density</span><span class="p">(</span><span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Count the number of countries that entered population ageing society in 2000 or in 2020</span>
+
+<span class="n">count_2000</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">wb_population_20years</span><span class="p">[(</span><span class="n">wb_population_20years</span><span class="p">[</span><span class="s1">&#39;year&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2000</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">wb_population_20years</span><span class="p">[</span><span class="s1">&#39;pop_over_65&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">7</span><span class="p">)])</span>
+
+<span class="n">count_2020</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">wb_population_20years</span><span class="p">[(</span><span class="n">wb_population_20years</span><span class="p">[</span><span class="s1">&#39;year&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2020</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">wb_population_20years</span><span class="p">[</span><span class="s1">&#39;pop_over_65&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">7</span><span class="p">)])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The number of countries that are regarded as population ageing society in 2000 is:&quot;</span><span class="p">,</span> <span class="n">count_2000</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The number of countries that are regarded as population ageing society in 2020 is:&quot;</span><span class="p">,</span> <span class="n">count_2020</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15909,21 +15900,481 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>/var/folders/bt/lw9rpr2s5pddmhwfn_jz88jh0000gn/T/ipykernel_81315/930560071.py:1: SettingWithCopyWarning: 
-A value is trying to be set on a copy of a slice from a DataFrame.
-Try using .loc[row_indexer,col_indexer] = value instead
-
-See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
-  wb_population_20years_s.life_expectancy = pd.to_numeric(wb_population_20years_s.life_expectancy, errors=&#39;coerce&#39;)
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>The number of countries that are regarded as population ageing society in 2000 is: 87
+The number of countries that are regarded as population ageing society in 2020 is: 138
 </pre>
 </div>
 </div>
 
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[126]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Show the top 5 countries with highest fraction of population ages 65 and above in 2000</span>
+
+<span class="n">wb_population_2000</span> <span class="o">=</span> <span class="n">wb_population_20years</span><span class="p">[</span><span class="n">wb_population_20years</span><span class="p">[</span><span class="s1">&#39;year&#39;</span><span class="p">]</span><span class="o">==</span><span class="mi">2000</span><span class="p">]</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;pop_over_65&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="n">wb_population_2000</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[122]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[126]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Series Name</th>
+      <th>Country Name</th>
+      <th>year</th>
+      <th>pop_over_65</th>
+      <th>fertility</th>
+      <th>life_expectancy</th>
+      <th>mortality_infant</th>
+      <th>death_rate</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>164</th>
+      <td>Monaco</td>
+      <td>2000</td>
+      <td>22.229752</td>
+      <td>..</td>
+      <td>..</td>
+      <td>1.9</td>
+      <td>..</td>
+    </tr>
+    <tr>
+      <th>118</th>
+      <td>Italy</td>
+      <td>2000</td>
+      <td>18.306030</td>
+      <td>1.26</td>
+      <td>79.7780487804878</td>
+      <td>4.7</td>
+      <td>9.8</td>
+    </tr>
+    <tr>
+      <th>120</th>
+      <td>Japan</td>
+      <td>2000</td>
+      <td>17.804888</td>
+      <td>1.36</td>
+      <td>81.0760975609756</td>
+      <td>3.3</td>
+      <td>7.7</td>
+    </tr>
+    <tr>
+      <th>234</th>
+      <td>Sweden</td>
+      <td>2000</td>
+      <td>17.264570</td>
+      <td>1.54</td>
+      <td>79.6439024390244</td>
+      <td>3.4</td>
+      <td>10.5</td>
+    </tr>
+    <tr>
+      <th>116</th>
+      <td>Isle of Man</td>
+      <td>2000</td>
+      <td>16.905323</td>
+      <td>1.694</td>
+      <td>74.725</td>
+      <td>..</td>
+      <td>12.885</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[127]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Draw the Population Ageing Distribution World Map in 2000</span>
+
+<span class="kn">import</span> <span class="nn">plotly.express</span> <span class="k">as</span> <span class="nn">px</span>
+<span class="n">fig1</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">choropleth</span><span class="p">(</span><span class="n">wb_population_20years</span><span class="p">[</span><span class="n">wb_population_20years</span><span class="p">[</span><span class="s1">&#39;year&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2000</span><span class="p">],</span>
+                    <span class="n">locations</span><span class="o">=</span><span class="s1">&#39;Country Name&#39;</span><span class="p">,</span> 
+                    <span class="n">locationmode</span><span class="o">=</span><span class="s2">&quot;country names&quot;</span><span class="p">,</span> 
+                    <span class="n">scope</span><span class="o">=</span><span class="s2">&quot;world&quot;</span><span class="p">,</span>
+                    <span class="n">color</span><span class="o">=</span><span class="s1">&#39;pop_over_65&#39;</span><span class="p">,</span>
+                    <span class="n">color_continuous_scale</span><span class="o">=</span><span class="s1">&#39;Blues&#39;</span><span class="p">)</span>
+
+<span class="n">fig1</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span>
+      <span class="n">title_text</span> <span class="o">=</span> <span class="s1">&#39;Population Ageing, 2000&#39;</span><span class="p">,</span>
+      <span class="n">title_font_family</span><span class="o">=</span><span class="s2">&quot;Times New Roman&quot;</span><span class="p">,</span>
+      <span class="n">title_font_size</span> <span class="o">=</span> <span class="mi">25</span><span class="p">,</span>
+      <span class="n">title_font_color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> 
+      <span class="n">title_x</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<div>                            <div id="336de6a3-b6e2-424d-a954-a6761e457ca7" class="plotly-graph-div" style="height:525px; width:100%;"></div>            <script type="text/javascript">                require(["plotly"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("336de6a3-b6e2-424d-a954-a6761e457ca7")) {                    Plotly.newPlot(                        "336de6a3-b6e2-424d-a954-a6761e457ca7",                        [{"coloraxis":"coloraxis","geo":"geo","hovertemplate":"Country Name=%{location}<br>pop_over_65=%{z}<extra></extra>","locationmode":"country names","locations":["Afghanistan","Africa Eastern and Southern","Africa Western and Central","Albania","Algeria","American Samoa","Andorra","Angola","Antigua and Barbuda","Arab World","Argentina","Armenia","Aruba","Australia","Austria","Azerbaijan","Bahamas, The","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bermuda","Bhutan","Bolivia","Bosnia and Herzegovina","Botswana","Brazil","British Virgin Islands","Brunei Darussalam","Bulgaria","Burkina Faso","Burundi","Cabo Verde","Cambodia","Cameroon","Canada","Caribbean small states","Cayman Islands","Central African Republic","Central Europe and the Baltics","Chad","Channel Islands","Chile","China","Colombia","Comoros","Congo, Dem. Rep.","Congo, Rep.","Costa Rica","Cote d'Ivoire","Croatia","Cuba","Curacao","Cyprus","Czechia","Denmark","Djibouti","Dominica","Dominican Republic","Early-demographic dividend","East Asia & Pacific","East Asia & Pacific (IDA & IBRD countries)","East Asia & Pacific (excluding high income)","Ecuador","Egypt, Arab Rep.","El Salvador","Equatorial Guinea","Eritrea","Estonia","Eswatini","Ethiopia","Euro area","Europe & Central Asia","Europe & Central Asia (IDA & IBRD countries)","Europe & Central Asia (excluding high income)","European Union","Faroe Islands","Fiji","Finland","Fragile and conflict affected situations","France","French Polynesia","Gabon","Gambia, The","Georgia","Germany","Ghana","Gibraltar","Greece","Greenland","Grenada","Guam","Guatemala","Guinea","Guinea-Bissau","Guyana","Haiti","Heavily indebted poor countries (HIPC)","High income","Honduras","Hong Kong SAR, China","Hungary","IBRD only","IDA & IBRD total","IDA blend","IDA only","IDA total","Iceland","India","Indonesia","Iran, Islamic Rep.","Iraq","Ireland","Isle of Man","Israel","Italy","Jamaica","Japan","Jordan","Kazakhstan","Kenya","Kiribati","Korea, Dem. People's Rep.","Korea, Rep.","Kosovo","Kuwait","Kyrgyz Republic","Lao PDR","Late-demographic dividend","Latin America & Caribbean","Latin America & Caribbean (excluding high income)","Latin America & the Caribbean (IDA & IBRD countries)","Latvia","Least developed countries: UN classification","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Low & middle income","Low income","Lower middle income","Luxembourg","Macao SAR, China","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Marshall Islands","Mauritania","Mauritius","Mexico","Micronesia, Fed. Sts.","Middle East & North Africa","Middle East & North Africa (IDA & IBRD countries)","Middle East & North Africa (excluding high income)","Middle income","Moldova","Monaco","Mongolia","Montenegro","Morocco","Mozambique","Myanmar","Namibia","Nauru","Nepal","Netherlands","New Caledonia","New Zealand","Nicaragua","Niger","Nigeria","North America","North Macedonia","Northern Mariana Islands","Norway","Not classified","OECD members","Oman","Other small states","Pacific island small states","Pakistan","Palau","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Poland","Portugal","Post-demographic dividend","Pre-demographic dividend","Puerto Rico","Qatar","Romania","Russian Federation","Rwanda","Samoa","San Marino","Sao Tome and Principe","Saudi Arabia","Senegal","Serbia","Seychelles","Sierra Leone","Singapore","Sint Maarten (Dutch part)","Slovak Republic","Slovenia","Small states","Solomon Islands","Somalia","South Africa","South Asia","South Asia (IDA & IBRD)","South Sudan","Spain","Sri Lanka","St. Kitts and Nevis","St. Lucia","St. Martin (French part)","St. Vincent and the Grenadines","Sub-Saharan Africa","Sub-Saharan Africa (IDA & IBRD countries)","Sub-Saharan Africa (excluding high income)","Sudan","Suriname","Sweden","Switzerland","Syrian Arab Republic","Tajikistan","Tanzania","Thailand","Timor-Leste","Togo","Tonga","Trinidad and Tobago","Tunisia","Turkiye","Turkmenistan","Turks and Caicos Islands","Tuvalu","Uganda","Ukraine","United Arab Emirates","United Kingdom","United States","Upper middle income","Uruguay","Uzbekistan","Vanuatu","Venezuela, RB","Vietnam","Virgin Islands (U.S.)","West Bank and Gaza","World","Yemen, Rep.","Zambia","Zimbabwe"],"name":"","z":[2.28480734708738,2.85665995891157,3.0837199960944,7.82196406339934,4.24364608746928,3.17965979443409,12.7175763077272,2.42654932011359,7.25867697022184,3.63274832345146,9.74190489982627,9.07903949584089,6.91911426358851,12.3685459899149,15.413033147977,5.51888768435291,5.01701465167654,2.46344747709581,3.76092412265225,11.2039356601186,13.8756196386042,16.80178248144,3.94332920143424,3.28178401242751,10.6304280523374,3.96538188407155,5.09283741837215,11.3454125641547,3.24959488634669,5.50378307089821,4.77777501430099,2.86425306167675,16.7909767864088,2.9375813354464,2.43090959491393,4.70255384058082,3.06279288588735,3.32011306028664,12.4877618738198,5.71462290994183,5.52466684317359,2.11445611664277,13.4720037092983,2.8050933166504,14.4694146510996,7.98309722473233,6.92062921691781,4.58077213579945,3.88816178628151,2.95088272523811,3.04186622336098,5.8548939263431,2.60120585701981,15.6593126337548,9.8951078766024,9.32903891842968,9.93922935973319,13.7410537279513,14.8384046526128,3.20525044388217,9.85646563076113,4.74629312751634,4.38845726524148,7.17785081370266,6.3478179629814,6.34806616267731,4.82378459854337,4.47590179768368,4.87376650630144,3.13411983176078,3.10232922301353,14.9832143356983,2.34940147783132,2.63431195617517,16.3466274413481,13.3149839460597,10.5544326752923,10.1562900019912,15.7256020120402,13.5711078745935,3.19432173965791,14.9188527742987,4.03315665414112,16.1551236977579,3.85988753701276,4.83897639666456,3.56209466317088,11.9176319266843,16.4322770456333,3.1935848878915,15.1668078510535,16.9000731918846,5.03613128292752,8.37041105071115,5.17456106125634,3.83856142531621,4.00989952341181,3.59556696231626,3.79421145614722,3.70394359625151,2.86304059651689,13.729038445607,2.99901978825924,11.1682769552806,15.0023157099231,null,5.48529392135828,null,null,null,11.5615962367922,4.49368306245378,5.01128656593442,4.11132639780381,3.17457472043568,11.1681222663975,16.9053227812922,9.97986253951719,18.3060303225248,5.88788016254467,17.8048884489408,2.70986520637937,6.56941068678141,2.20681866610121,3.24681538522159,6.36499855704994,7.13398058941335,6.28184325392636,1.55664254743717,5.06030983254518,3.54721440628203,7.24221859193751,5.65055277027018,5.52676359522871,5.51185834105334,15.1464381107945,3.16196751492489,5.20157652497013,4.4204780274488,3.185556627052,3.63377557572665,10.2932493603621,14.0243188444166,5.39343674688013,2.95569513990551,4.38916495698925,13.9325295894662,7.25406956080811,2.82814079127522,3.67146042789335,4.10001024181581,3.78026700270613,3.16034618783122,12.6961522902021,2.13372184160297,3.01409627111802,6.21820079354864,5.00430395103661,3.28757435647243,3.98975497702609,4.04169353523923,4.02307607493292,5.59465179041848,10.3792408127533,22.2297515824491,3.42434524646167,10.909652160938,4.29498723235991,2.82055235315092,4.93548160701187,3.13389671278917,1.57567580590758,3.76365349938611,13.6018468929285,5.37720561350926,11.7049381287828,3.20685857387611,2.23884539389202,3.11107227666373,12.333980374832,9.72209375615666,1.32875271507434,15.1584047164217,null,12.7419149598452,2.44999100993131,5.16748513149726,3.4667707667162,3.46170282321867,5.11267141517325,5.07112311677444,2.28344601939165,4.2435534900823,4.70825516155114,3.77344219497254,12.1716835654577,16.2734923233545,14.4418849997421,2.84757253124369,11.1517481147974,1.25197968222907,13.3564735184525,12.3489774128187,2.39938071428831,4.30144341550367,16.0536862708547,4.26577878904904,2.63329114647508,3.2870938012805,14.6818811592457,6.39770172370722,3.44448499552908,6.31768901859519,3.02727168369439,11.2836067621164,13.8995907453313,5.17211789567127,3.31993343853239,2.62060903758715,4.15696166292864,4.30477252209365,4.30477252209365,2.45134448523949,16.7169327929674,7.14576048800911,7.86058379710081,7.16332288401254,3.84167243621135,7.03481603514552,2.94786518655808,2.94786518655808,2.94744814645705,2.51351840635303,4.83592328577229,17.2645698333009,15.3075740536245,3.32378280775395,3.58195526429665,2.78465135378368,6.1006013444279,3.0985035170679,2.80780757245032,5.39704198240784,5.31124209720369,5.44827464564331,5.36672460190044,4.08202258109418,3.98516898290165,6.0074704295497,2.23813026245387,13.9561305702521,0.897588123100766,15.7189212612901,12.3176296433869,6.7415710632791,13.1029642723332,4.59578341577115,3.5335339504566,4.75159407474174,6.20005151317939,8.40319822526228,2.23293115646458,6.88608623550922,2.67777669193833,2.23004224338045,3.07569032410814],"type":"choropleth"}],                        {"template":{"data":{"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"choropleth":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"choropleth"}],"contour":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"contour"}],"contourcarpet":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"contourcarpet"}],"heatmap":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"heatmap"}],"heatmapgl":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"heatmapgl"}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"histogram2d":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"histogram2d"}],"histogram2dcontour":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"histogram2dcontour"}],"mesh3d":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"mesh3d"}],"parcoords":[{"line":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"parcoords"}],"pie":[{"automargin":true,"type":"pie"}],"scatter":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatter"}],"scatter3d":[{"line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatter3d"}],"scattercarpet":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattercarpet"}],"scattergeo":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattergeo"}],"scattergl":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattergl"}],"scattermapbox":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattermapbox"}],"scatterpolar":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterpolar"}],"scatterpolargl":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterpolargl"}],"scatterternary":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterternary"}],"surface":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"surface"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}]},"layout":{"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"autotypenumbers":"strict","coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]],"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]},"colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"geo":{"bgcolor":"white","lakecolor":"white","landcolor":"#E5ECF6","showlakes":true,"showland":true,"subunitcolor":"white"},"hoverlabel":{"align":"left"},"hovermode":"closest","mapbox":{"style":"light"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"bgcolor":"#E5ECF6","radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","gridwidth":2,"linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white"},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","gridwidth":2,"linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white"},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","gridwidth":2,"linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white"}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"ternary":{"aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"bgcolor":"#E5ECF6","caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"title":{"x":0.05},"xaxis":{"automargin":true,"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","zerolinewidth":2},"yaxis":{"automargin":true,"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","zerolinewidth":2}}},"geo":{"domain":{"x":[0.0,1.0],"y":[0.0,1.0]},"center":{},"scope":"world"},"coloraxis":{"colorbar":{"title":{"text":"pop_over_65"}},"colorscale":[[0.0,"rgb(247,251,255)"],[0.125,"rgb(222,235,247)"],[0.25,"rgb(198,219,239)"],[0.375,"rgb(158,202,225)"],[0.5,"rgb(107,174,214)"],[0.625,"rgb(66,146,198)"],[0.75,"rgb(33,113,181)"],[0.875,"rgb(8,81,156)"],[1.0,"rgb(8,48,107)"]]},"legend":{"tracegroupgap":0},"margin":{"t":60},"title":{"font":{"family":"Times New Roman","size":25,"color":"black"},"text":"Population Ageing, 2000","x":0.5}},                        {"responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('336de6a3-b6e2-424d-a954-a6761e457ca7');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };                });            </script>        </div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[128]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Show the top 5 countries with highest fraction of population ages 65 and above in 2020</span>
+
+<span class="n">wb_population_2020</span> <span class="o">=</span> <span class="n">wb_population_20years</span><span class="p">[</span><span class="n">wb_population_20years</span><span class="p">[</span><span class="s1">&#39;year&#39;</span><span class="p">]</span><span class="o">==</span><span class="mi">2020</span><span class="p">]</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;pop_over_65&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="n">wb_population_2020</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[128]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Series Name</th>
+      <th>Country Name</th>
+      <th>year</th>
+      <th>pop_over_65</th>
+      <th>fertility</th>
+      <th>life_expectancy</th>
+      <th>mortality_infant</th>
+      <th>death_rate</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>430</th>
+      <td>Monaco</td>
+      <td>2020</td>
+      <td>35.849900</td>
+      <td>..</td>
+      <td>..</td>
+      <td>1</td>
+      <td>..</td>
+    </tr>
+    <tr>
+      <th>386</th>
+      <td>Japan</td>
+      <td>2020</td>
+      <td>29.583178</td>
+      <td>1.33</td>
+      <td>84.56</td>
+      <td>1.8</td>
+      <td>11.1</td>
+    </tr>
+    <tr>
+      <th>384</th>
+      <td>Italy</td>
+      <td>2020</td>
+      <td>23.372071</td>
+      <td>1.24</td>
+      <td>82.1951219512195</td>
+      <td>2.4</td>
+      <td>12.5</td>
+    </tr>
+    <tr>
+      <th>347</th>
+      <td>Finland</td>
+      <td>2020</td>
+      <td>22.490093</td>
+      <td>1.37</td>
+      <td>81.9317073170732</td>
+      <td>1.8</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>462</th>
+      <td>Portugal</td>
+      <td>2020</td>
+      <td>22.296726</td>
+      <td>1.41</td>
+      <td>80.9756097560976</td>
+      <td>2.7</td>
+      <td>12</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[129]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Draw the Population Ageing Distribution World Map in 2020</span>
+
+<span class="n">fig2</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">choropleth</span><span class="p">(</span><span class="n">wb_population_20years</span><span class="p">[</span><span class="n">wb_population_20years</span><span class="p">[</span><span class="s1">&#39;year&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2020</span><span class="p">],</span>
+                    <span class="n">locations</span><span class="o">=</span><span class="s1">&#39;Country Name&#39;</span><span class="p">,</span> 
+                    <span class="n">locationmode</span><span class="o">=</span><span class="s2">&quot;country names&quot;</span><span class="p">,</span> 
+                    <span class="n">scope</span><span class="o">=</span><span class="s2">&quot;world&quot;</span><span class="p">,</span>
+                    <span class="n">color</span><span class="o">=</span><span class="s1">&#39;pop_over_65&#39;</span><span class="p">,</span>
+                    <span class="n">color_continuous_scale</span><span class="o">=</span><span class="s1">&#39;Blues&#39;</span><span class="p">)</span>
+
+<span class="n">fig2</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span>
+      <span class="n">title_text</span> <span class="o">=</span> <span class="s1">&#39;Population Ageing, 2020&#39;</span><span class="p">,</span>
+      <span class="n">title_font_family</span><span class="o">=</span><span class="s2">&quot;Times New Roman&quot;</span><span class="p">,</span>
+      <span class="n">title_font_size</span> <span class="o">=</span> <span class="mi">25</span><span class="p">,</span>
+      <span class="n">title_font_color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> 
+      <span class="n">title_x</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<div>                            <div id="ba2061e6-3ed2-489d-b81f-aff5c1ddf218" class="plotly-graph-div" style="height:525px; width:100%;"></div>            <script type="text/javascript">                require(["plotly"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("ba2061e6-3ed2-489d-b81f-aff5c1ddf218")) {                    Plotly.newPlot(                        "ba2061e6-3ed2-489d-b81f-aff5c1ddf218",                        [{"coloraxis":"coloraxis","geo":"geo","hovertemplate":"Country Name=%{location}<br>pop_over_65=%{z}<extra></extra>","locationmode":"country names","locations":["Afghanistan","Africa Eastern and Southern","Africa Western and Central","Albania","Algeria","American Samoa","Andorra","Angola","Antigua and Barbuda","Arab World","Argentina","Armenia","Aruba","Australia","Austria","Azerbaijan","Bahamas, The","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bermuda","Bhutan","Bolivia","Bosnia and Herzegovina","Botswana","Brazil","British Virgin Islands","Brunei Darussalam","Bulgaria","Burkina Faso","Burundi","Cabo Verde","Cambodia","Cameroon","Canada","Caribbean small states","Cayman Islands","Central African Republic","Central Europe and the Baltics","Chad","Channel Islands","Chile","China","Colombia","Comoros","Congo, Dem. Rep.","Congo, Rep.","Costa Rica","Cote d'Ivoire","Croatia","Cuba","Curacao","Cyprus","Czechia","Denmark","Djibouti","Dominica","Dominican Republic","Early-demographic dividend","East Asia & Pacific","East Asia & Pacific (IDA & IBRD countries)","East Asia & Pacific (excluding high income)","Ecuador","Egypt, Arab Rep.","El Salvador","Equatorial Guinea","Eritrea","Estonia","Eswatini","Ethiopia","Euro area","Europe & Central Asia","Europe & Central Asia (IDA & IBRD countries)","Europe & Central Asia (excluding high income)","European Union","Faroe Islands","Fiji","Finland","Fragile and conflict affected situations","France","French Polynesia","Gabon","Gambia, The","Georgia","Germany","Ghana","Gibraltar","Greece","Greenland","Grenada","Guam","Guatemala","Guinea","Guinea-Bissau","Guyana","Haiti","Heavily indebted poor countries (HIPC)","High income","Honduras","Hong Kong SAR, China","Hungary","IBRD only","IDA & IBRD total","IDA blend","IDA only","IDA total","Iceland","India","Indonesia","Iran, Islamic Rep.","Iraq","Ireland","Isle of Man","Israel","Italy","Jamaica","Japan","Jordan","Kazakhstan","Kenya","Kiribati","Korea, Dem. People's Rep.","Korea, Rep.","Kosovo","Kuwait","Kyrgyz Republic","Lao PDR","Late-demographic dividend","Latin America & Caribbean","Latin America & Caribbean (excluding high income)","Latin America & the Caribbean (IDA & IBRD countries)","Latvia","Least developed countries: UN classification","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Low & middle income","Low income","Lower middle income","Luxembourg","Macao SAR, China","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Marshall Islands","Mauritania","Mauritius","Mexico","Micronesia, Fed. Sts.","Middle East & North Africa","Middle East & North Africa (IDA & IBRD countries)","Middle East & North Africa (excluding high income)","Middle income","Moldova","Monaco","Mongolia","Montenegro","Morocco","Mozambique","Myanmar","Namibia","Nauru","Nepal","Netherlands","New Caledonia","New Zealand","Nicaragua","Niger","Nigeria","North America","North Macedonia","Northern Mariana Islands","Norway","Not classified","OECD members","Oman","Other small states","Pacific island small states","Pakistan","Palau","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Poland","Portugal","Post-demographic dividend","Pre-demographic dividend","Puerto Rico","Qatar","Romania","Russian Federation","Rwanda","Samoa","San Marino","Sao Tome and Principe","Saudi Arabia","Senegal","Serbia","Seychelles","Sierra Leone","Singapore","Sint Maarten (Dutch part)","Slovak Republic","Slovenia","Small states","Solomon Islands","Somalia","South Africa","South Asia","South Asia (IDA & IBRD)","South Sudan","Spain","Sri Lanka","St. Kitts and Nevis","St. Lucia","St. Martin (French part)","St. Vincent and the Grenadines","Sub-Saharan Africa","Sub-Saharan Africa (IDA & IBRD countries)","Sub-Saharan Africa (excluding high income)","Sudan","Suriname","Sweden","Switzerland","Syrian Arab Republic","Tajikistan","Tanzania","Thailand","Timor-Leste","Togo","Tonga","Trinidad and Tobago","Tunisia","Turkiye","Turkmenistan","Turks and Caicos Islands","Tuvalu","Uganda","Ukraine","United Arab Emirates","United Kingdom","United States","Upper middle income","Uruguay","Uzbekistan","Vanuatu","Venezuela, RB","Vietnam","Virgin Islands (U.S.)","West Bank and Gaza","World","Yemen, Rep.","Zambia","Zimbabwe"],"name":"","z":[2.41695301478831,3.16669494525835,2.89695650549969,15.822112678783,6.01747007813233,6.45391759942843,14.1949806949807,2.58997520856912,9.80477855477855,4.35576340297197,11.7274541416082,12.407896540091,14.9369748884688,16.2335929179415,19.1494297623302,6.47151357356977,8.27893222526057,3.1971229176382,5.6329625843332,15.1562383101823,16.5527294408646,19.2076193876575,4.80565075755753,3.08886103536286,19.0221847400848,6.03205670894466,4.97840930778252,17.7428631052696,3.54835960700628,9.29075512793776,9.07473309608541,5.46652328937687,22.2651260546645,2.56141374198483,2.46672187295383,5.36840930935054,5.27259166472753,2.73698475900564,18.0184265996951,8.14603636999987,7.52780026890307,2.47886962803808,19.2639666919042,2.03263783372745,16.2998027613412,12.3955778026311,12.5982619560395,8.47231076171452,4.33403294110642,3.00071140817177,2.64763930388655,10.218324629302,2.40883203976997,21.5708969983057,15.5518048531162,14.2467714626087,14.1544454832462,20.1648929510514,20.0469184421079,4.45748131460085,9.17222843411649,6.96498579251993,6.13446264407147,12.1325060572206,10.8822681718817,10.8849920002526,7.54415837239534,4.70870905907027,8.10377084289794,3.16653911206332,3.99657692580264,20.1811810049916,3.94772393290165,3.13009683831197,21.1746618486035,16.8103626143485,12.9894372658815,12.1198268564058,20.7622613495723,17.8078794238291,5.53925264715533,22.4900930794789,4.02582409541266,21.0095477123755,9.23756166792804,3.90439039454796,2.45499699882867,14.501600143604,21.9637344087494,3.40550754160106,20.0421908678172,22.1814168484866,8.98681873756169,9.68559714708522,11.1102575769215,4.85058258590094,3.3868105650427,2.79939558335334,6.04708718743806,4.43311488222377,2.91765964629876,18.5739496251314,4.117187885154,18.7604182532697,20.0974558160559,null,7.79487059298669,null,null,null,14.5718618154248,6.67232006787184,6.70951911634314,7.1076541617204,3.40286336318926,14.5443326373668,21.8441201492049,11.8056892902926,23.3720710799476,7.04254715273581,29.5831784516048,3.61247670244304,7.84405363269757,2.8030771107022,3.6856484282026,11.1009496987084,15.8290693238877,9.68924075768309,3.98390576923981,4.26798253164187,4.27857533111667,12.0136304184391,8.79502024475866,8.60004136293766,8.6012758034457,21.4001513927926,3.59415030479555,9.3500733322638,4.21094893749168,3.37516752793,4.80500882033537,18.4745587779957,20.4200383190737,7.69713678773075,3.16541823034424,5.8188618717288,14.5581492371108,11.6795039946295,3.2461993638906,2.78899873440563,7.01171985186864,4.38400740225256,2.49587496065782,18.8412715044687,3.91122577078558,3.30473668106113,11.783114473996,8.02123669897249,5.55899970117701,5.17890210616637,5.43233160836926,5.40900366816933,8.21091262988967,13.3553138940116,35.8498997887438,4.26028318310069,15.966123384959,7.15127378958437,2.6001260045508,6.45415218310218,4.03264556076137,2.11936662606577,6.03979862431386,19.6470630241117,10.3790812247078,15.5784074852007,5.0583597688863,2.43561192051078,3.00253320729103,16.4084810937067,14.5855552500235,8.81288253859417,17.7299264903652,null,17.3914206486087,2.75632877019262,5.61010410165377,4.63367017557328,4.17417916257474,9.15312708657912,8.36375961092554,3.03358380411995,6.16223439817064,8.25253456293149,5.22218731894015,18.3740401768053,22.2967255949746,19.682539375408,2.82593673070454,21.7050435655479,1.25582119885451,18.6858929427591,15.3060701838106,3.10210547610455,5.01420233146218,19.6988855235687,3.78863067768625,2.39663290714769,3.17310898192517,20.7446461876994,7.63811238510376,3.14715725542131,13.154199090183,8.93825292573616,16.8241845935455,20.1009991778588,5.99632537758511,3.46286588140317,2.6158408087602,6.00053469336587,6.22764421326151,6.22764421326151,2.80060006258588,19.6725085886783,10.8029791003068,9.1945216980637,8.91643164199256,9.85316253494302,10.6749814828089,3.05747155108473,3.05747155108473,3.05707977064697,3.3379844225826,7.1148064869495,20.0325934028449,18.7258475405716,4.55117416598229,3.23618674518954,3.12767778203859,13.8503665118077,5.37205912330432,3.05815283953483,6.18218785034298,10.6744274434557,8.57849253761165,8.18209546745335,4.71578151803122,9.97481734102741,5.99421808654802,1.66481584536345,17.1900576835399,1.65397566501915,18.7225119004065,16.2234001500798,10.9062495626619,15.338152012205,4.8675298116888,3.71336445449733,7.99434273659421,8.42740854894926,19.6445727655126,3.43230163994652,9.42511977441351,2.71838453455283,1.72986015480474,3.37626213602766],"type":"choropleth"}],                        {"template":{"data":{"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"choropleth":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"choropleth"}],"contour":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"contour"}],"contourcarpet":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"contourcarpet"}],"heatmap":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"heatmap"}],"heatmapgl":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"heatmapgl"}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"histogram2d":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"histogram2d"}],"histogram2dcontour":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"histogram2dcontour"}],"mesh3d":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"mesh3d"}],"parcoords":[{"line":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"parcoords"}],"pie":[{"automargin":true,"type":"pie"}],"scatter":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatter"}],"scatter3d":[{"line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatter3d"}],"scattercarpet":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattercarpet"}],"scattergeo":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattergeo"}],"scattergl":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattergl"}],"scattermapbox":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattermapbox"}],"scatterpolar":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterpolar"}],"scatterpolargl":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterpolargl"}],"scatterternary":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterternary"}],"surface":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"surface"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}]},"layout":{"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"autotypenumbers":"strict","coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]],"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]},"colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"geo":{"bgcolor":"white","lakecolor":"white","landcolor":"#E5ECF6","showlakes":true,"showland":true,"subunitcolor":"white"},"hoverlabel":{"align":"left"},"hovermode":"closest","mapbox":{"style":"light"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"bgcolor":"#E5ECF6","radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","gridwidth":2,"linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white"},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","gridwidth":2,"linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white"},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","gridwidth":2,"linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white"}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"ternary":{"aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"bgcolor":"#E5ECF6","caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"title":{"x":0.05},"xaxis":{"automargin":true,"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","zerolinewidth":2},"yaxis":{"automargin":true,"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","zerolinewidth":2}}},"geo":{"domain":{"x":[0.0,1.0],"y":[0.0,1.0]},"center":{},"scope":"world"},"coloraxis":{"colorbar":{"title":{"text":"pop_over_65"}},"colorscale":[[0.0,"rgb(247,251,255)"],[0.125,"rgb(222,235,247)"],[0.25,"rgb(198,219,239)"],[0.375,"rgb(158,202,225)"],[0.5,"rgb(107,174,214)"],[0.625,"rgb(66,146,198)"],[0.75,"rgb(33,113,181)"],[0.875,"rgb(8,81,156)"],[1.0,"rgb(8,48,107)"]]},"legend":{"tracegroupgap":0},"margin":{"t":60},"title":{"font":{"family":"Times New Roman","size":25,"color":"black"},"text":"Population Ageing, 2020","x":0.5}},                        {"responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('ba2061e6-3ed2-489d-b81f-aff5c1ddf218');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };                });            </script>        </div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Yes, population ageing is becoming a global issue gradually. 87 countries were in the population ageing stage in 2000 while 138 countries were in population ageing society in 2020. It means 51 countries entered the population ageing society between those 20 years. Monaco, Japan, and Italy were in the top 5 list both in 2000 and in 2020. The fraction of population ages 65 and above in Monaco reached almost 36% which means an extremely high burden for younger people to raise senior people. From the population ageing distribution in the world, it seems the issue is more severe in developed countries than in developing countries.</p>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ol>
+<li>The life expectancy at birth - What can we tell from the life expectancy trend?</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[130]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Show the density plot of life expectancy and the trend from 2000 to 2020</span>
+
+<span class="n">wb_population_20years</span><span class="p">[</span><span class="s1">&#39;life_expectancy&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">wb_population_20years</span><span class="p">[</span><span class="s1">&#39;life_expectancy&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;..&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+
+<span class="n">wb_population_20years</span><span class="p">[</span><span class="s1">&#39;life_expectancy&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">wb_population_20years</span><span class="p">[</span><span class="s1">&#39;life_expectancy&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+
+<span class="n">wb_population_20years</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;year&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">life_expectancy</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">density</span><span class="p">(</span><span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[130]:</div>
 
 
 
@@ -15967,7 +16418,7 @@ jp-needs-light-background
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>The overall distribution of life expectancy shift to the right meaning an increased life expectancy from 2000 to 2020. People generally can live longer.</p>
+<p>The overall distribution of life expectancy shifts to the right showing an increased average life expectancy and a less dispersed distribution from 2000 to 2020. People generally can live longer than 20 years ago.</p>
 
 </div>
 </div>
@@ -15980,7 +16431,7 @@ jp-needs-light-background
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ol>
-<li>Fertility rate - What can we say about fertility rates?</li>
+<li>Fertility rate - What can we tell from the fertility rates changes?</li>
 </ol>
 
 </div>
@@ -15991,11 +16442,16 @@ jp-needs-light-background
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[123]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[131]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">wb_population_20years_s</span><span class="o">.</span><span class="n">fertility</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">wb_population_20years_s</span><span class="o">.</span><span class="n">fertility</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">)</span>
-<span class="n">wb_population_20years_s</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;year&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">fertility</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Show the distribution of fertility rates and changes from 2000 to 2020</span>
+
+<span class="n">wb_population_20years</span><span class="p">[</span><span class="s1">&#39;fertility&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">wb_population_20years</span><span class="p">[</span><span class="s1">&#39;fertility&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;..&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+
+<span class="n">wb_population_20years</span><span class="p">[</span><span class="s1">&#39;fertility&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">wb_population_20years</span><span class="p">[</span><span class="s1">&#39;fertility&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+
+<span class="n">wb_population_20years</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;year&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">fertility</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -16013,24 +16469,7 @@ jp-needs-light-background
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>/var/folders/bt/lw9rpr2s5pddmhwfn_jz88jh0000gn/T/ipykernel_81315/885290609.py:1: SettingWithCopyWarning: 
-A value is trying to be set on a copy of a slice from a DataFrame.
-Try using .loc[row_indexer,col_indexer] = value instead
-
-See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
-  wb_population_20years_s.fertility = pd.to_numeric(wb_population_20years_s.fertility, errors=&#39;coerce&#39;)
-</pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[123]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[131]:</div>
 
 
 
@@ -16087,7 +16526,11 @@ jp-needs-light-background
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Summary:</p>
-<p>Comparing the ratio of population ages 65 and above, life expectancy, and fertility rate in 2000 and 2020, we have more countries are encountering population ageing challenges. The increased life expectancy and declined fertility rates are two major direct driving forces.</p>
+<ol>
+<li>By comparing the ratio of population ages 65 and above, life expectancy, and fertility rate in 2000 and 2020, we have more countries are encountering population ageing challenges. </li>
+<li>The increased life expectancy and declined fertility rates are two major direct driving forces. </li>
+<li>To find more patterns behind it, we can present the dynamic changes among two or three typical countries using this dataset and try to connect this trend with other factors such as GDP per capita, health status, educational attainment, and technological development in the future work.</li>
+</ol>
 
 </div>
 </div>
